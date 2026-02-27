@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shine Nails - Cursos & Capacitaciones</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header>
+  <nav class="navbar navbar-expand-lg glass-nav">
+    <div class="container-fluid px-3 px-lg-4">
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Left: Navigation Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services" data-translate="navbar_services">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#pricing" data-translate="navbar_pricing">PRECIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#gallery" data-translate="navbar_collections">GALERÍA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="presson.html" data-translate="navbar_presson">PRESS ON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tienda.html" data-translate="navbar_tienda">TIENDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="courses.html" data-translate="navbar_courses">CURSOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#booking" data-translate="navbar_booking">TURNOS</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Center: Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="navLogo" class="nav-logo">
+      </a>
+
+      <!-- Right: Actions -->
+      <div class="d-flex align-items-center gap-2 nav-actions">
+        <!-- Language Selector -->
+        <div class="dropdown lang-dropdown">
+          <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://flagcdn.com/w40/ar.png" alt="Espa&ntilde;ol"> <span>ES</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w40/us.png" alt="English"> English</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w40/ar.png" alt="Espa&ntilde;ol"> Espa&ntilde;ol</a></li>
+          </ul>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+
+        <!-- Back to Home -->
+        <a href="index.html" class="nav-action-btn" aria-label="Home">
+          <i class="bi bi-house"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ========== COURSES HERO ========== -->
+  <section class="courses-hero">
+    <img src="img/BannerCursos.jpeg" alt="Cursos Shine Nails" class="courses-hero-bg">
+    <div class="courses-hero-overlay"></div>
+    <div class="courses-hero-content">
+      <img src="img/ShineLogoBM.png" alt="Shine Nails" id="heroLogo" class="hero-logo">
+      <h1 data-translate="courses_title">CURSOS</h1>
+      <p data-translate="courses_subtitle">Capacitaci&oacute;n profesional para iniciar tu carrera</p>
+      <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20info%20sobre%20los%20cursos" target="_blank" rel="noopener" class="glass-btn">
+        <i class="bi bi-whatsapp me-2"></i><span data-translate="courses_cta">MÁS INFO</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== COURSES GRID ========== -->
+  <section class="courses-section" id="courses">
+    <div class="courses-grid container">
+      <!-- Course 1: Manicuría Básica -->
+      <div class="glass-card course-card">
+        <div class="course-header">
+          <div class="course-icon"><i class="bi bi-hand-index-thumb"></i></div>
+          <h4 class="course-name" data-translate="course_basic_name">Manicur&iacute;a B&aacute;sica</h4>
+          <p class="course-tagline" data-translate="course_basic_tag">Inici&aacute; tu carrera en el cuidado de u&ntilde;as</p>
+        </div>
+        <div class="course-body">
+          <p class="course-desc" data-translate="course_basic_desc">Curso introductorio completo que cubre los fundamentos de la manicur&iacute;a, anatom&iacute;a de la u&ntilde;a, protocolos de higiene, aplicaci&oacute;n de esmalte cl&aacute;sico y t&eacute;cnicas b&aacute;sicas de moldeado. Ideal para principiantes.</p>
+          <div class="course-meta">
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span><strong data-translate="course_duration">Duraci&oacute;n:</strong> <span data-translate="course_basic_duration">4 semanas (16 hs)</span></span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-tag"></i>
+              <span><strong data-translate="course_price_label">Precio:</strong> <span class="course-price-value">$45.000</span></span>
+            </div>
+          </div>
+          <div class="course-materials">
+            <h5 data-translate="course_materials">Materiales incluidos:</h5>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_basic_m1">Kit de manicur&iacute;a para pr&aacute;ctica</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_basic_m2">Set de esmaltes cl&aacute;sicos (6 colores)</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_basic_m3">Manual de estudio y certificado</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="course-video">
+          <h5 data-translate="course_video_title">Vista Previa del Curso</h5>
+          <div class="video-placeholder">
+            <i class="bi bi-play-circle"></i>
+            <p data-translate="course_video_soon">Video pr&oacute;ximamente</p>
+          </div>
+        </div>
+        <div class="course-footer">
+          <a href="https://wa.me/543517890168?text=Hola!%20Me%20interesa%20el%20curso%20de%20Manicur%C3%ADa%20B%C3%A1sica" target="_blank" rel="noopener" class="glass-btn btn-accent">
+            <i class="bi bi-whatsapp me-2"></i><span data-translate="course_enroll">INSCRIBIRME</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Course 2: Nail Art Avanzado -->
+      <div class="glass-card course-card">
+        <div class="course-header">
+          <div class="course-icon"><i class="bi bi-palette"></i></div>
+          <h4 class="course-name" data-translate="course_art_name">Nail Art Avanzado</h4>
+          <p class="course-tagline" data-translate="course_art_tag">Domin&aacute; los dise&ntilde;os creativos</p>
+        </div>
+        <div class="course-body">
+          <p class="course-desc" data-translate="course_art_desc">Curso avanzado de pintura a mano alzada, stamping, t&eacute;cnicas de foil, dise&ntilde;os 3D, efectos chrome y hologr&aacute;ficos, colocaci&oacute;n de cristales y estilos de nail art en tendencia.</p>
+          <div class="course-meta">
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span><strong data-translate="course_duration">Duraci&oacute;n:</strong> <span data-translate="course_art_duration">6 semanas (24 hs)</span></span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-tag"></i>
+              <span><strong data-translate="course_price_label">Precio:</strong> <span class="course-price-value">$65.000</span></span>
+            </div>
+          </div>
+          <div class="course-materials">
+            <h5 data-translate="course_materials">Materiales incluidos:</h5>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_art_m1">Set de pinceles de nail art (15 pcs)</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_art_m2">Kit de stamping y foils</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_art_m3">Surtido de cristales y charms</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_art_m4">Certificado de finalizaci&oacute;n</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="course-video">
+          <h5 data-translate="course_video_title">Vista Previa del Curso</h5>
+          <div class="video-placeholder">
+            <i class="bi bi-play-circle"></i>
+            <p data-translate="course_video_soon">Video pr&oacute;ximamente</p>
+          </div>
+        </div>
+        <div class="course-footer">
+          <a href="https://wa.me/543517890168?text=Hola!%20Me%20interesa%20el%20curso%20de%20Nail%20Art%20Avanzado" target="_blank" rel="noopener" class="glass-btn btn-accent">
+            <i class="bi bi-whatsapp me-2"></i><span data-translate="course_enroll">INSCRIBIRME</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Course 3: Gel & Acrílicas -->
+      <div class="glass-card course-card">
+        <div class="course-header">
+          <div class="course-badge" data-translate="most_popular">M&Aacute;S POPULAR</div>
+          <div class="course-icon"><i class="bi bi-gem"></i></div>
+          <h4 class="course-name" data-translate="course_gel_name">Gel & Acr&iacute;licas Profesional</h4>
+          <p class="course-tagline" data-translate="course_gel_tag">Convertite en t&eacute;cnica certificada</p>
+        </div>
+        <div class="course-body">
+          <p class="course-desc" data-translate="course_gel_desc">Certificaci&oacute;n profesional en sistemas de u&ntilde;as en gel y acr&iacute;lico. Incluye esculpido, aplicaci&oacute;n de tips, curado de gel, rellenos, remoci&oacute;n segura, resoluci&oacute;n de problemas y bases de gesti&oacute;n de sal&oacute;n.</p>
+          <div class="course-meta">
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span><strong data-translate="course_duration">Duraci&oacute;n:</strong> <span data-translate="course_gel_duration">8 semanas (32 hs)</span></span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-tag"></i>
+              <span><strong data-translate="course_price_label">Precio:</strong> <span class="course-price-value">$85.000</span></span>
+            </div>
+          </div>
+          <div class="course-materials">
+            <h5 data-translate="course_materials">Materiales incluidos:</h5>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_gel_m1">Kit completo de gel y acr&iacute;lico</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_gel_m2">L&aacute;mpara UV/LED</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_gel_m3">Mano de pr&aacute;ctica y tips</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_gel_m4">Certificado profesional</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="course-video">
+          <h5 data-translate="course_video_title">Vista Previa del Curso</h5>
+          <div class="video-placeholder">
+            <i class="bi bi-play-circle"></i>
+            <p data-translate="course_video_soon">Video pr&oacute;ximamente</p>
+          </div>
+        </div>
+        <div class="course-footer">
+          <a href="https://wa.me/543517890168?text=Hola!%20Me%20interesa%20el%20curso%20de%20Gel%20%26%20Acr%C3%ADlicas%20Profesional" target="_blank" rel="noopener" class="glass-btn btn-accent">
+            <i class="bi bi-whatsapp me-2"></i><span data-translate="course_enroll">INSCRIBIRME</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Course 4: Capacitación Integral -->
+      <div class="glass-card course-card">
+        <div class="course-header">
+          <div class="course-icon"><i class="bi bi-award"></i></div>
+          <h4 class="course-name" data-translate="course_full_name">Capacitaci&oacute;n Integral</h4>
+          <p class="course-tagline" data-translate="course_full_tag">Todos los cursos en un programa completo</p>
+        </div>
+        <div class="course-body">
+          <p class="course-desc" data-translate="course_full_desc">Nuestro programa m&aacute;s completo que combina manicur&iacute;a b&aacute;sica, nail art avanzado y t&eacute;cnicas de gel y acr&iacute;lico. Incluye mentor&iacute;a de negocio, marketing en redes sociales para nail artists y soporte continuo exclusivo.</p>
+          <div class="course-meta">
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span><strong data-translate="course_duration">Duraci&oacute;n:</strong> <span data-translate="course_full_duration">12 semanas (48 hs)</span></span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-tag"></i>
+              <span><strong data-translate="course_price_label">Precio:</strong> <span class="course-price-value">$150.000</span></span>
+            </div>
+          </div>
+          <div class="course-materials">
+            <h5 data-translate="course_materials">Materiales incluidos:</h5>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_full_m1">Kit profesional completo</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_full_m2">L&aacute;mpara UV/LED + todas las herramientas</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_full_m3">Gu&iacute;a de inicio de negocio</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span data-translate="course_full_m4">Diploma profesional</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="course-video">
+          <h5 data-translate="course_video_title">Vista Previa del Curso</h5>
+          <div class="video-placeholder">
+            <i class="bi bi-play-circle"></i>
+            <p data-translate="course_video_soon">Video pr&oacute;ximamente</p>
+          </div>
+        </div>
+        <div class="course-footer">
+          <a href="https://wa.me/543517890168?text=Hola!%20Me%20interesa%20la%20Capacitaci%C3%B3n%20Integral" target="_blank" rel="noopener" class="glass-btn btn-accent">
+            <i class="bi bi-whatsapp me-2"></i><span data-translate="course_enroll">INSCRIBIRME</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="courses-cta-section">
+    <div class="container">
+      <div class="glass-card courses-cta-card">
+        <h3 data-translate="courses_cta_title">No sab&eacute;s cu&aacute;l elegir?</h3>
+        <p data-translate="courses_cta_desc">Escribinos por WhatsApp y te asesoramos seg&uacute;n tu nivel y objetivos.</p>
+        <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20asesoramiento%20sobre%20los%20cursos" target="_blank" rel="noopener" class="glass-btn btn-accent">
+          <i class="bi bi-whatsapp me-2"></i><span data-translate="courses_cta_btn">CONSULT&Aacute; GRATIS</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="glass-footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="footerLogo" class="footer-logo">
+        <p class="footer-text" data-translate="footer_desc">Productos premium de cuidado y belleza para u&ntilde;as. Elev&aacute; tu estilo con nuestras colecciones.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_links">ENLACES</div>
+        <ul class="footer-links">
+          <li><a href="index.html#services" data-translate="navbar_services">SERVICIOS</a></li>
+          <li><a href="index.html#pricing" data-translate="navbar_pricing">PRECIOS</a></li>
+          <li><a href="index.html#gallery" data-translate="navbar_collections">GALERÍA</a></li>
+          <li><a href="presson.html" data-translate="navbar_presson">PRESS ON</a></li>
+          <li><a href="tienda.html" data-translate="navbar_tienda">TIENDA</a></li>
+          <li><a href="courses.html" data-translate="navbar_courses">CURSOS</a></li>
+          <li><a href="index.html#booking" data-translate="navbar_booking">TURNOS</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + Social -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_contact">CONTACTO</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/543517890168" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> +54 351 789-0168</a></li>
+          <li><a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener"><i class="bi bi-instagram me-1"></i> @shine.nails.cba</a></li>
+          <li><a href="https://maps.app.goo.gl/rGSip4wjcJRv6JXB7" target="_blank" rel="noopener"><i class="bi bi-geo-alt me-1"></i> Av. Duarte Quir&oacute;s 609, C&oacute;rdoba</a></li>
+        </ul>
+        <div class="footer-social mt-3">
+          <a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/543517890168" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@shine.nails.cba?_t=8pYx1BjxAQw&_r=1" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_location">ENCONTRANOS</div>
+        <div class="footer-map glass-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5!2d-64.193!3d-31.417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2808ac972bd%3A0x55e23761ae4da07b!2sAv.%20Duarte%20Quir%C3%B3s%20609%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar"
+            width="100%" height="200" style="border:0; border-radius: 16px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+    <p class="footer-copyright" data-translate="footer_rights">&copy; 2026 Shine Nails. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/index.js"></script>
+
+</body>
+</html>

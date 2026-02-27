@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shine Nails - Press On Nails</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header>
+  <nav class="navbar navbar-expand-lg glass-nav">
+    <div class="container-fluid px-3 px-lg-4">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services" data-translate="navbar_services">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#pricing" data-translate="navbar_pricing">PROMO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#gallery" data-translate="navbar_collections">GALERÍA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="presson.html" data-translate="navbar_presson">PRESS ON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tienda.html" data-translate="navbar_tienda">TIENDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html" data-translate="navbar_courses">CURSOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#booking" data-translate="navbar_booking">TURNOS</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand" href="index.html">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="navLogo" class="nav-logo">
+      </a>
+
+      <div class="d-flex align-items-center gap-2 nav-actions">
+        <div class="dropdown lang-dropdown">
+          <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://flagcdn.com/w40/ar.png" alt="Español"> <span>ES</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w40/us.png" alt="English"> English</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w40/ar.png" alt="Español"> Español</a></li>
+          </ul>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+
+        <a href="index.html" class="nav-action-btn" aria-label="Home">
+          <i class="bi bi-house"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="presson-hero">
+    <div class="presson-hero-overlay"></div>
+    <div class="presson-hero-content">
+      <img src="img/ShineLogoBM.png" alt="Shine Nails" id="heroLogo" class="hero-logo">
+      <h1 data-translate="presson_title">PRESS ON NAILS</h1>
+      <p data-translate="presson_subtitle">Uñas hechas a mano, listas para usar</p>
+      <a href="#collection" class="glass-btn">
+        <i class="bi bi-palette me-2"></i><span data-translate="presson_cta">VER COLECCIÓN</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== COLLECTION ========== -->
+  <section class="presson-section" id="collection">
+    <h2 class="section-title" data-translate="presson_collection_title">NUESTRA COLECCIÓN</h2>
+    <p class="section-subtitle" data-translate="presson_collection_sub">Elegí un diseño de nuestra colección o envianos tu idea personalizada</p>
+
+    <div class="presson-grid container">
+      <!-- Design 1 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-1.jpg" alt="French Clásico" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-basic">Básico</span>
+          <h4 class="presson-card-name">French Clásico</h4>
+          <p class="presson-card-desc">Elegancia atemporal. Punta blanca sobre base nude natural.</p>
+          <div class="presson-card-price">$25.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22French%20Cl%C3%A1sico%22%20%24%2025.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 2 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-2.jpg" alt="Nude Natural" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-basic">Básico</span>
+          <h4 class="presson-card-name">Nude Natural</h4>
+          <p class="presson-card-desc">Tonos neutros y acabado glossy. Perfectas para todos los días.</p>
+          <div class="presson-card-price">$25.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Nude%20Natural%22%20%24%2025.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 3 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-3.jpg" alt="Colour Pop" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-basic">Básico</span>
+          <h4 class="presson-card-name">Colour Pop</h4>
+          <p class="presson-card-desc">Un color vibrante y sólido a elección. Acabado espejo impecable.</p>
+          <div class="presson-card-price">$28.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Colour%20Pop%22%20%24%2028.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 4 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-4.jpg" alt="Mármol Rosa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-design">Diseño</span>
+          <h4 class="presson-card-name">Mármol Rosa</h4>
+          <p class="presson-card-desc">Efecto mármol pintado a mano con vetas doradas. Súper elegante.</p>
+          <div class="presson-card-price">$40.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22M%C3%A1rmol%20Rosa%22%20%24%2040.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 5 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-5.jpg" alt="Cherry Blossom" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-design">Diseño</span>
+          <h4 class="presson-card-name">Cherry Blossom</h4>
+          <p class="presson-card-desc">Flores de cerezo pintadas a mano sobre base rosa pastel.</p>
+          <div class="presson-card-price">$40.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Cherry%20Blossom%22%20%24%2040.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 6 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-6.jpg" alt="Golden Foil" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-design">Diseño</span>
+          <h4 class="presson-card-name">Golden Foil</h4>
+          <p class="presson-card-desc">Láminas de oro sobre base oscura. Técnica foil de alto impacto.</p>
+          <div class="presson-card-price">$45.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Golden%20Foil%22%20%24%2045.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 7 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-7.jpg" alt="Crystal Fantasy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-premium">Premium</span>
+          <h4 class="presson-card-name">Crystal Fantasy</h4>
+          <p class="presson-card-desc">Cristales y piedras incrustadas a mano. Brillo total.</p>
+          <div class="presson-card-price">$55.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Crystal%20Fantasy%22%20%24%2055.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 8 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-8.jpg" alt="Abstract Art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-premium">Premium</span>
+          <h4 class="presson-card-name">Abstract Art</h4>
+          <p class="presson-card-desc">Arte abstracto único en cada uña. Líneas, manchas y texturas.</p>
+          <div class="presson-card-price">$55.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Abstract%20Art%22%20%24%2055.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 9 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-9.jpg" alt="Flores 3D" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-premium">Premium</span>
+          <h4 class="presson-card-name">Flores 3D</h4>
+          <p class="presson-card-desc">Flores tridimensionales esculpidas en acrílico. Arte puro.</p>
+          <div class="presson-card-price">$60.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Flores%203D%22%20%24%2060.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+
+      <!-- Design 10 -->
+      <div class="glass-card presson-card">
+        <div class="presson-card-img">
+          <img src="img/presson/design-10.jpg" alt="Luxury Swarovski" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="presson-placeholder"><i class="bi bi-image"></i><span>Foto próximamente</span></div>
+        </div>
+        <div class="presson-card-body">
+          <span class="presson-tier tier-exclusive">Exclusive</span>
+          <h4 class="presson-card-name">Luxury Swarovski</h4>
+          <p class="presson-card-desc">Cristales Swarovski genuinos con diseño de alta costura.</p>
+          <div class="presson-card-price">$75.000</div>
+          <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20las%20Press%20On%20%22Luxury%20Swarovski%22%20%24%2075.000" target="_blank" rel="noopener" class="glass-btn btn-accent presson-buy-btn">
+            <i class="bi bi-whatsapp me-2"></i>PEDIR
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Design CTA -->
+    <div class="container">
+      <div class="glass-card presson-custom-cta">
+        <div class="custom-cta-icon"><i class="bi bi-palette2"></i></div>
+        <h3 data-translate="presson_custom_title">¿Querés un diseño personalizado?</h3>
+        <p data-translate="presson_custom_desc">Envianos tu idea por WhatsApp: fotos, capturas de Pinterest o cualquier referencia. Lo creamos especialmente para vos.</p>
+        <div class="custom-cta-price">Desde <strong>$30.000</strong></div>
+        <a href="https://wa.me/543517890168?text=Hola!%20Quiero%20pedir%20Press%20On%20personalizadas%20con%20un%20dise%C3%B1o%20propio" target="_blank" rel="noopener" class="glass-btn btn-accent">
+          <i class="bi bi-whatsapp me-2"></i><span data-translate="presson_custom_btn">ENVIAR MI DISEÑO</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIZING GUIDE ========== -->
+  <section class="presson-section presson-sizing-section" id="sizing">
+    <h2 class="section-title" data-translate="presson_sizing_title">GUÍA DE TALLES</h2>
+    <p class="section-subtitle" data-translate="presson_sizing_sub">Medí tus uñas para el calce perfecto</p>
+
+    <div class="container">
+      <!-- How to measure -->
+      <div class="glass-card sizing-instructions">
+        <h3><i class="bi bi-rulers me-2"></i>Cómo medir tus uñas</h3>
+        <div class="sizing-steps">
+          <div class="sizing-step">
+            <span class="step-number">1</span>
+            <div>
+              <strong>Medí el ancho</strong>
+              <p>Con una cinta métrica flexible o regla, medí el ancho de cada uña en su punto más ancho (en milímetros).</p>
+            </div>
+          </div>
+          <div class="sizing-step">
+            <span class="step-number">2</span>
+            <div>
+              <strong>Las 10 uñas</strong>
+              <p>Medí cada dedo de ambas manos. La mano dominante puede tener uñas ligeramente más anchas.</p>
+            </div>
+          </div>
+          <div class="sizing-step">
+            <span class="step-number">3</span>
+            <div>
+              <strong>Entre dos talles? Elegí el más grande</strong>
+              <p>Siempre se puede limar el exceso, pero no se puede agregar material.</p>
+            </div>
+          </div>
+          <div class="sizing-step">
+            <span class="step-number">4</span>
+            <div>
+              <strong>No remojes antes de medir</strong>
+              <p>El agua hincha las uñas y da medidas incorrectas. Medí con las uñas secas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size Chart -->
+      <div class="glass-card size-chart-card">
+        <h3><i class="bi bi-grid-3x3-gap me-2"></i>Tabla de Talles (ancho en mm)</h3>
+        <div class="table-responsive">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Talle</th>
+                <th><i class="bi bi-hand-index-thumb"></i> Pulgar</th>
+                <th>Índice</th>
+                <th>Medio</th>
+                <th>Anular</th>
+                <th>Meñique</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="size-badge">XS</span></td>
+                <td>14 mm</td><td>10 mm</td><td>11 mm</td><td>10 mm</td><td>8 mm</td>
+              </tr>
+              <tr>
+                <td><span class="size-badge">S</span></td>
+                <td>15 mm</td><td>11 mm</td><td>12 mm</td><td>11 mm</td><td>9 mm</td>
+              </tr>
+              <tr class="size-popular">
+                <td><span class="size-badge size-badge-popular">M</span></td>
+                <td>16 mm</td><td>12 mm</td><td>13 mm</td><td>12 mm</td><td>10 mm</td>
+              </tr>
+              <tr>
+                <td><span class="size-badge">L</span></td>
+                <td>17 mm</td><td>13 mm</td><td>14 mm</td><td>13 mm</td><td>11 mm</td>
+              </tr>
+              <tr>
+                <td><span class="size-badge">XL</span></td>
+                <td>19 mm</td><td>17 mm</td><td>18 mm</td><td>16 mm</td><td>15 mm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="size-chart-tip"><i class="bi bi-info-circle me-1"></i>Envianos las medidas de tus 10 uñas por WhatsApp y te asesoramos el talle ideal.</p>
+      </div>
+
+      <!-- Length Options -->
+      <div class="length-section">
+        <h3 class="length-title"><i class="bi bi-arrows-vertical me-2"></i>Largo disponible</h3>
+        <div class="length-grid">
+          <div class="glass-card length-card">
+            <div class="length-visual">
+              <div class="nail-shape" style="height: 35px;"></div>
+            </div>
+            <h5>Corto</h5>
+            <span class="length-tag">Short</span>
+            <p>Natural y práctico. Ideal para el día a día y trabajo.</p>
+          </div>
+          <div class="glass-card length-card length-popular">
+            <div class="length-badge">Más popular</div>
+            <div class="length-visual">
+              <div class="nail-shape" style="height: 55px;"></div>
+            </div>
+            <h5>Medio</h5>
+            <span class="length-tag">Medium</span>
+            <p>Elegante y versátil. El equilibrio perfecto.</p>
+          </div>
+          <div class="glass-card length-card">
+            <div class="length-visual">
+              <div class="nail-shape" style="height: 75px;"></div>
+            </div>
+            <h5>Largo</h5>
+            <span class="length-tag">Long</span>
+            <p>Glam y statement. Para las más audaces.</p>
+          </div>
+          <div class="glass-card length-card">
+            <div class="length-visual">
+              <div class="nail-shape" style="height: 95px;"></div>
+            </div>
+            <h5>Extra Largo</h5>
+            <span class="length-tag">XL</span>
+            <p>Máximo impacto. Ideal para eventos y sesiones de fotos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CARE GUIDE ========== -->
+  <section class="presson-section presson-care-section" id="care">
+    <h2 class="section-title" data-translate="presson_care_title">CÓMO APLICAR Y CUIDAR</h2>
+    <p class="section-subtitle" data-translate="presson_care_sub">Todo lo que necesitás saber para que duren más</p>
+
+    <div class="container">
+      <div class="care-grid">
+        <!-- Application -->
+        <div class="glass-card care-card">
+          <div class="care-card-header">
+            <i class="bi bi-hand-index-thumb"></i>
+            <h3>Aplicación</h3>
+          </div>
+          <div class="care-card-body">
+            <ol class="care-steps">
+              <li>
+                <strong>Preparación</strong>
+                <p>Retirá esmalte anterior, empujá cutículas y cortá las uñas bien cortitas.</p>
+              </li>
+              <li>
+                <strong>Desengrasá</strong>
+                <p>Limpiá cada uña con alcohol al 70%. No te laves las manos después.</p>
+              </li>
+              <li>
+                <strong>Probá los talles</strong>
+                <p>Antes de pegar, verificá que cada press-on calce bien en cada dedo.</p>
+              </li>
+              <li>
+                <strong>Pegamento</strong>
+                <p>Aplicá pegamento en la press-on Y en tu uña natural. Capa fina y pareja.</p>
+              </li>
+              <li>
+                <strong>Colocación</strong>
+                <p>Posicioná en ángulo de 45° desde la cutícula y presioná hacia abajo.</p>
+              </li>
+              <li>
+                <strong>Presión</strong>
+                <p>Presioná firme 30-60 seg por uña. Del centro hacia los bordes.</p>
+              </li>
+              <li>
+                <strong>Esperar</strong>
+                <p>No toques nada por 5 min. Evitá el agua por 1-2 horas.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Care Tips -->
+        <div class="glass-card care-card">
+          <div class="care-card-header">
+            <i class="bi bi-shield-check"></i>
+            <h3>Cuidados</h3>
+          </div>
+          <div class="care-card-body">
+            <div class="care-duration">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <strong>Duración estimada</strong>
+                <p>7-14 días con pegamento | 3-5 días con adhesivos</p>
+              </div>
+            </div>
+            <ul class="care-tips-list">
+              <li><i class="bi bi-check-circle-fill"></i> Usá guantes para limpiar y lavar platos</li>
+              <li><i class="bi bi-check-circle-fill"></i> Secá bien las manos después de lavarlas</li>
+              <li><i class="bi bi-check-circle-fill"></i> Aplicá aceite de cutícula alrededor (no debajo)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Si se levanta una, pegala de nuevo enseguida</li>
+              <li><i class="bi bi-x-circle-fill"></i> No uses las uñas como herramientas</li>
+              <li><i class="bi bi-x-circle-fill"></i> Evitá remojos largos (pileta, bañera, jacuzzi)</li>
+              <li><i class="bi bi-x-circle-fill"></i> Evitá acetona y químicos fuertes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Removal -->
+        <div class="glass-card care-card">
+          <div class="care-card-header">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            <h3>Remoción segura</h3>
+          </div>
+          <div class="care-card-body">
+            <ol class="care-steps">
+              <li>
+                <strong>Remojá</strong>
+                <p>Sumergí las manos en agua tibia con jabón 10-15 minutos.</p>
+              </li>
+              <li>
+                <strong>Aflojá</strong>
+                <p>Movelas suavemente de lado a lado. NUNCA tires ni arranques.</p>
+              </li>
+              <li>
+                <strong>Deslizá</strong>
+                <p>Usá un palito de naranjo por debajo del borde para separar.</p>
+              </li>
+              <li>
+                <strong>Pulí</strong>
+                <p>Eliminá residuos de adhesivo con un buffer de grano fino.</p>
+              </li>
+              <li>
+                <strong>Hidratá</strong>
+                <p>Aplicá aceite de cutícula y crema de manos para nutrir.</p>
+              </li>
+              <li>
+                <strong>Guardá</strong>
+                <p>Limpiá las press-ons con alcohol y guardalas para reutilizar.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kit info -->
+    <div class="container">
+      <div class="glass-card presson-kit-info">
+        <h3><i class="bi bi-box-seam me-2"></i>Cada pedido incluye</h3>
+        <div class="kit-items">
+          <div class="kit-item">
+            <i class="bi bi-gem"></i>
+            <span>Set de 10 uñas hechas a mano</span>
+          </div>
+          <div class="kit-item">
+            <i class="bi bi-droplet"></i>
+            <span>Pegamento profesional</span>
+          </div>
+          <div class="kit-item">
+            <i class="bi bi-layers"></i>
+            <span>Adhesivos de respaldo</span>
+          </div>
+          <div class="kit-item">
+            <i class="bi bi-pencil"></i>
+            <span>Palito de naranjo</span>
+          </div>
+          <div class="kit-item">
+            <i class="bi bi-bandaid"></i>
+            <span>Prep pad con alcohol</span>
+          </div>
+          <div class="kit-item">
+            <i class="bi bi-file-earmark-text"></i>
+            <span>Instrucciones de aplicación</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="glass-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="footerLogo" class="footer-logo">
+        <p class="footer-text" data-translate="footer_desc">Cuidado de uñas y belleza premium. Elevá tu estilo con Shine Nails.</p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_links">ENLACES</div>
+        <ul class="footer-links">
+          <li><a href="index.html#services" data-translate="navbar_services">SERVICIOS</a></li>
+          <li><a href="index.html#gallery" data-translate="navbar_collections">GALERÍA</a></li>
+          <li><a href="presson.html" data-translate="navbar_presson">PRESS ON</a></li>
+          <li><a href="tienda.html" data-translate="navbar_tienda">TIENDA</a></li>
+          <li><a href="courses.html" data-translate="navbar_courses">CURSOS</a></li>
+          <li><a href="index.html#booking" data-translate="navbar_booking">TURNOS</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_contact">CONTACTO</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/543517890168" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> +54 351 789-0168</a></li>
+          <li><a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener"><i class="bi bi-instagram me-1"></i> @shine.nails.cba</a></li>
+          <li><a href="https://maps.app.goo.gl/rGSip4wjcJRv6JXB7" target="_blank" rel="noopener"><i class="bi bi-geo-alt me-1"></i> Av. Duarte Quirós 609, Córdoba</a></li>
+        </ul>
+        <div class="footer-social mt-3">
+          <a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/543517890168" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@shine.nails.cba?_t=8pYx1BjxAQw&_r=1" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_location">ENCONTRANOS</div>
+        <div class="footer-map glass-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5!2d-64.193!3d-31.417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2808ac972bd%3A0x55e23761ae4da07b!2sAv.%20Duarte%20Quir%C3%B3s%20609%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar"
+            width="100%" height="200" style="border:0; border-radius: 16px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+    <p class="footer-copyright" data-translate="footer_rights">&copy; 2026 Shine Nails. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script data-translations-path="js/translations.json" src="js/index.js"></script>
+
+</body>
+</html>

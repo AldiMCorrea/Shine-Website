@@ -1,164 +1,543 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shine Nails - E-commerce</title>
-  <!-- Google Fonts: Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<!-- Agregar Google Fonts Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Enlace al archivo CSS externo -->
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
-  <div class="container-fluid">
-    <!-- Izquierda: Servicios, Dudas, Colecciones -->
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-translate="navbar_services">OUR SERVICES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-translate="navbar_doubts">DOUBTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-translate="navbar_collections">COLLECTIONS</a>
-        </li>
-      </ul>
+<!-- ========== NAVBAR ========== -->
+<header>
+  <nav class="navbar navbar-expand-lg glass-nav">
+    <div class="container-fluid px-3 px-lg-4">
 
-    <!-- Centro: Logo -->
-    <a class="navbar-brand mx-auto" href="#">
-      <img src="img/shinelogo.svg" alt="Logo" class="logo">
-    </a>
-
-  <!-- Derecha: Idioma y Iconos -->
-  <div class="d-flex align-items-center">
-    <!-- Selector de idioma -->
-    <div class="dropdown me-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://flagcdn.com/w40/us.png" alt="English"> <span>English</span>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-        <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w40/us.png" alt="English"> English</a></li>
-        <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w40/es.png" alt="Español"> Español</a></li>
-      </ul>
+
+      <!-- Left: Navigation Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#services" data-translate="navbar_services">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing" data-translate="navbar_pricing">PRICING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery" data-translate="navbar_collections">GALERÍA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="presson.html" data-translate="navbar_presson">PRESS ON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tienda.html" data-translate="navbar_tienda">TIENDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html" data-translate="navbar_courses">CURSOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#booking" data-translate="navbar_booking">BOOK</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Center: Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="navLogo" class="nav-logo">
+      </a>
+
+      <!-- Right: Actions -->
+      <div class="d-flex align-items-center gap-2 nav-actions">
+        <!-- Language Selector -->
+        <div class="dropdown lang-dropdown">
+          <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://flagcdn.com/w40/ar.png" alt="Espa\u00f1ol"> <span>ES</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" data-lang="en"><img src="https://flagcdn.com/w40/us.png" alt="English"> English</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="es"><img src="https://flagcdn.com/w40/ar.png" alt="Espa&ntilde;ol"> Espa&ntilde;ol</a></li>
+          </ul>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero-section">
+    <video autoplay loop muted playsinline id="promoVideo">
+      <source src="img/VideoPromoShine.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="heroLogo" class="hero-logo">
+        <p data-translate="hero_subtitle">Luxury nail care, crafted for you</p>
+        <a href="#booking" class="glass-btn" data-translate="hero_cta">BOOK YOUR APPOINTMENT</a>
+      </div>
     </div>
 
-    <!-- Iconos de Usuario, Buscar y Carrito -->
-    <a href="#" class="btn btn-outline-light me-2">
-      <i class="bi bi-person"></i>
-    </a>
-    <a href="#" class="btn btn-outline-light me-2">
-      <i class="bi bi-search"></i>
-    </a>
-    <a href="#" class="btn btn-outline-light">
-      <i class="bi bi-cart"></i>
-    </a>
-  </div>
-</div>
-</nav>
-
-<!-- Video Promocional -->
-<div class="video-container">
-    <video autoplay loop muted playsinline class="w-100" id="promoVideo">
-      <source src="img/VideoPromoShine.mp4">
-      Your browser does not support the video tag.
-    </video>
     <div class="social-icons">
-      <a href="https://www.instagram.com/" target="_blank">
+      <a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener" aria-label="Instagram">
         <i class="bi bi-instagram"></i>
       </a>
-      <a href="https://www.whatsapp.com/" target="_blank">
+      <a href="https://wa.me/543517890168" target="_blank" rel="noopener" aria-label="WhatsApp">
         <i class="bi bi-whatsapp"></i>
       </a>
-      <a href="https://www.tiktok.com/" target="_blank">
+      <a href="https://www.tiktok.com/@shine.nails.cba?_t=8pYx1BjxAQw&_r=1" target="_blank" rel="noopener" aria-label="TikTok">
         <i class="bi bi-tiktok"></i>
       </a>
     </div>
-  </div>
-<!-- Carrusel -->
-<div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="card" style="width: 18rem;">
-        <img src="img/img1.svg" class="card-img-top" alt="Product 1">
-        <div class="card-body">
-          <h5 class="card-title">Product Title 1</h5>
-          <a href="#" class="btn shop-now-btn">Shop Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="card" style="width: 18rem;">
-        <img src="img/img2.svg" class="card-img-top" alt="Product 2">
-        <div class="card-body">
-          <h5 class="card-title">Product Title 2</h5>
-          <a href="#" class="btn shop-now-btn">Shop Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="card" style="width: 18rem;">
-        <img src="img/img3.svg" class="card-img-top" alt="Product 3">
-        <div class="card-body">
-          <h5 class="card-title">Product Title 3</h5>
-          <a href="#" class="btn shop-now-btn">Shop Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="card" style="width: 18rem;">
-        <img src="img/img4.svg" class="card-img-top" alt="Product 4">
-        <div class="card-body">
-          <h5 class="card-title">Product Title 4</h5>
-          <a href="#" class="btn shop-now-btn">Shop Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="card" style="width: 18rem;">
-        <img src="img/img5.svg" class="card-img-top" alt="Product 5">
-        <div class="card-body">
-          <h5 class="card-title">Product Title 5</h5>
-          <a href="#" class="btn shop-now-btn">Shop Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="card" style="width: 18rem;">
-        <img src="img/img6.svg" class="card-img-top" alt="Product 6">
-        <div class="card-body">
-          <h5 class="card-title">Product Title 6</h5>
-          <a href="#" class="btn shop-now-btn">Shop Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
-  <!-- Controles del Carrusel -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+  <!-- ========== SERVICES SECTION ========== -->
+  <section class="services-section" id="services">
+    <h2 class="section-title" data-translate="services_title">OUR SERVICES</h2>
+    <p class="section-subtitle" data-translate="services_subtitle">Premium treatments for every occasion</p>
+
+    <!-- NAILS -->
+    <div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-brush"></i> <span data-translate="cat_nails">Nails</span></h3>
+      <div class="services-grid">
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/Pedicure3.jpeg" alt="Gel Manicure"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_gel_mani">Gel Manicure</h4>
+            <p class="service-desc" data-translate="svc_gel_mani_d">Long-lasting gel polish with a flawless mirror-like finish.</p>
+            <span class="service-price">$12.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/img5.svg" alt="Nail Art"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_nail_art">Nail Art</h4>
+            <p class="service-desc" data-translate="svc_nail_art_d">Custom hand-painted designs, from minimalist to crystal embellishments.</p>
+            <span class="service-price">$8.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/Pedicure1.jpeg" alt="Spa Pedicure"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_spa_pedi">Spa Pedicure</h4>
+            <p class="service-desc" data-translate="svc_spa_pedi_d">Relaxing foot treatment with exfoliation, massage, and polish.</p>
+            <span class="service-price">$15.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/Pedicure2.jpeg" alt="Acrylic Extensions"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_acrylic">Acrylic Extensions</h4>
+            <p class="service-desc" data-translate="svc_acrylic_d">Sculpted acrylic nails in any shape and length.</p>
+            <span class="service-price">$18.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACIAL TREATMENTS -->
+    <div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-droplet-half"></i> <span data-translate="cat_facial">Facial Treatments</span></h3>
+      <div class="services-grid">
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/LimpiezaFacial2.jpeg" alt="Limpieza de Cutis"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_skin_clean">Skin Cleansing</h4>
+            <p class="service-desc" data-translate="svc_skin_clean_d">Deep cleansing facial to purify, exfoliate, and revitalize your skin.</p>
+            <span class="service-price">$14.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/LimpiezaFacial1.jpeg" alt="Hidrafacial"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_hydra">Hydrafacial</h4>
+            <p class="service-desc" data-translate="svc_hydra_d">Intensive hydration treatment for a radiant and luminous complexion.</p>
+            <span class="service-price">$16.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/LimpiezaFacial3.jpeg" alt="Peeling Qu&iacute;mico"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_peel">Chemical Peel</h4>
+            <p class="service-desc" data-translate="svc_peel_d">Professional peeling for skin renewal and blemish reduction.</p>
+            <span class="service-price">$20.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/NuestroSalon.jpeg" alt="Masaje Facial"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_facial_massage">Facial Massage</h4>
+            <p class="service-desc" data-translate="svc_facial_massage_d">Relaxing facial massage with essential oils for anti-aging and glow.</p>
+            <span class="service-price">$10.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EYEBROWS -->
+    <div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-eye"></i> <span data-translate="cat_brows">Eyebrows</span></h3>
+      <div class="services-grid">
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/PerfiladoCejas.jpeg" alt="Perfilado de Cejas"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_brow_shape">Eyebrow Shaping</h4>
+            <p class="service-desc" data-translate="svc_brow_shape_d">Precise brow shaping with wax or thread for the perfect arch.</p>
+            <span class="service-price">$5.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/LaminacionCejas.jpeg" alt="Brow Lifting"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_brow_lift">Brow Lifting</h4>
+            <p class="service-desc" data-translate="svc_brow_lift_d">Lamination treatment to lift and set brows in place for weeks.</p>
+            <span class="service-price">$8.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/PerfiladoCejas2.jpeg" alt="Tinte de Cejas"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_brow_tint">Brow Tinting</h4>
+            <p class="service-desc" data-translate="svc_brow_tint_d">Semi-permanent tinting for fuller, more defined brows.</p>
+            <span class="service-price">$6.000</span>
+          </div>
+        </div>
+        <div class="glass-card service-card has-image">
+          <div class="service-img"><img src="img/serviciosimagenes/LiftingDePestanas.jpeg" alt="Lifting de Pesta&ntilde;as"></div>
+          <div class="service-body">
+            <h4 class="service-name" data-translate="svc_lash_lift">Lash Lifting</h4>
+            <p class="service-desc" data-translate="svc_lash_lift_d">Natural lash lift and tint for an open, awake look without extensions.</p>
+            <span class="service-price">$10.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING SECTION ========== -->
+  <section class="pricing-section" id="pricing">
+    <h2 class="section-title" data-translate="pricing_title">PRICING</h2>
+    <p class="section-subtitle" data-translate="pricing_subtitle">Transparent pricing, no surprises</p>
+
+    <div class="pricing-grid container">
+      <!-- Basic -->
+      <div class="glass-card pricing-card">
+        <div class="pricing-header">
+          <h4 class="pricing-name" data-translate="plan_basic">BASIC</h4>
+          <div class="pricing-price">$8.000</div>
+          <p class="pricing-period" data-translate="plan_session">per session</p>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="basic_f1">Classic Manicure</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="basic_f2">Regular Polish</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="basic_f3">Nail Shaping</span></li>
+          <li class="disabled"><i class="bi bi-x-circle"></i> <span data-translate="basic_f4">Nail Art</span></li>
+        </ul>
+        <a href="#booking" class="glass-btn" data-translate="book_now">BOOK NOW</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="glass-card pricing-card featured">
+        <div class="pricing-badge" data-translate="most_popular">MOST POPULAR</div>
+        <div class="pricing-header">
+          <h4 class="pricing-name" data-translate="plan_premium">PREMIUM</h4>
+          <div class="pricing-price">$15.000</div>
+          <p class="pricing-period" data-translate="plan_session">per session</p>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="premium_f1">Gel Manicure</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="premium_f2">Nail Art (Basic)</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="premium_f3">Hand Massage</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="premium_f4">Cuticle Care</span></li>
+        </ul>
+        <a href="#booking" class="glass-btn btn-accent" data-translate="book_now">BOOK NOW</a>
+      </div>
+
+      <!-- Luxury -->
+      <div class="glass-card pricing-card">
+        <div class="pricing-header">
+          <h4 class="pricing-name" data-translate="plan_luxury">LUXURY</h4>
+          <div class="pricing-price">$25.000</div>
+          <p class="pricing-period" data-translate="plan_session">per session</p>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="luxury_f1">Full Gel Set</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="luxury_f2">Custom Nail Art</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="luxury_f3">Spa Pedicure</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span data-translate="luxury_f4">Crystal Add-ons</span></li>
+        </ul>
+        <a href="#booking" class="glass-btn" data-translate="book_now">BOOK NOW</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="products-section" id="gallery">
+    <h2 class="section-title" data-translate="products_title">GALERÍA</h2>
+    <p class="section-subtitle" data-translate="products_subtitle">Mirá nuestros últimos trabajos</p>
+
+    <div class="carousel-wrapper">
+      <div class="products-carousel" id="productsCarousel">
+        <div class="carousel-track">
+          <div class="glass-card product-card">
+            <div class="card-img-wrapper"><img src="img/img1.svg" alt="Elegancia Clásica"></div>
+            <div class="card-body">
+              <h5 class="card-title" data-translate="product_1">Elegancia Clásica</h5>
+              <a href="#booking" class="glass-btn" data-translate="book_now">RESERVAR</a>
+            </div>
+          </div>
+          <div class="glass-card product-card">
+            <div class="card-img-wrapper"><img src="img/img2.svg" alt="Cuarzo Rosa"></div>
+            <div class="card-body">
+              <h5 class="card-title" data-translate="product_2">Cuarzo Rosa</h5>
+              <a href="#booking" class="glass-btn" data-translate="book_now">RESERVAR</a>
+            </div>
+          </div>
+          <div class="glass-card product-card">
+            <div class="card-img-wrapper"><img src="img/img3.svg" alt="Glamour Nocturno"></div>
+            <div class="card-body">
+              <h5 class="card-title" data-translate="product_3">Glamour Nocturno</h5>
+              <a href="#booking" class="glass-btn" data-translate="book_now">RESERVAR</a>
+            </div>
+          </div>
+          <div class="glass-card product-card">
+            <div class="card-img-wrapper"><img src="img/img4.svg" alt="Hora Dorada"></div>
+            <div class="card-body">
+              <h5 class="card-title" data-translate="product_4">Hora Dorada</h5>
+              <a href="#booking" class="glass-btn" data-translate="book_now">RESERVAR</a>
+            </div>
+          </div>
+          <div class="glass-card product-card">
+            <div class="card-img-wrapper"><img src="img/img5.svg" alt="Escarcha Perla"></div>
+            <div class="card-body">
+              <h5 class="card-title" data-translate="product_5">Escarcha Perla</h5>
+              <a href="#booking" class="glass-btn" data-translate="book_now">RESERVAR</a>
+            </div>
+          </div>
+          <div class="glass-card product-card">
+            <div class="card-img-wrapper"><img src="img/img6.svg" alt="Baya Terciopelo"></div>
+            <div class="card-body">
+              <h5 class="card-title" data-translate="product_6">Baya Terciopelo</h5>
+              <a href="#booking" class="glass-btn" data-translate="book_now">RESERVAR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-ctrl carousel-ctrl-prev" id="carouselPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+      <button class="carousel-ctrl carousel-ctrl-next" id="carouselNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING SECTION ========== -->
+  <section class="booking-section" id="booking">
+    <h2 class="section-title" data-translate="booking_title">RESERVÁ TU TURNO</h2>
+    <p class="section-subtitle" data-translate="booking_subtitle">Elegí tus servicios y tu profesional</p>
+
+    <!-- Service Selector -->
+    <div class="container">
+      <div class="glass-card service-selector" id="serviceSelector">
+        <h4 class="selector-title"><i class="bi bi-list-check me-2"></i><span data-translate="booking_select_services">Seleccioná tus servicios</span></h4>
+
+        <div class="selector-columns">
+          <!-- Nails -->
+          <div class="selector-group">
+            <h5 class="selector-group-title" data-translate="cat_nails">Uñas</h5>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Gel Manicure - $12.000" data-price="12000">
+              <span class="check-label"><span data-translate="svc_gel_mani">Manicure en Gel</span> <span class="check-price">$12.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Nail Art - $8.000" data-price="8000">
+              <span class="check-label"><span data-translate="svc_nail_art">Nail Art</span> <span class="check-price">$8.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Spa Pedicure - $15.000" data-price="15000">
+              <span class="check-label"><span data-translate="svc_spa_pedi">Pedicure Spa</span> <span class="check-price">$15.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Acrylic Extensions - $18.000" data-price="18000">
+              <span class="check-label"><span data-translate="svc_acrylic">Extensiones Acrílicas</span> <span class="check-price">$18.000</span></span>
+            </label>
+          </div>
+
+          <!-- Facial -->
+          <div class="selector-group">
+            <h5 class="selector-group-title" data-translate="cat_facial">Tratamientos Faciales</h5>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Skin Cleansing - $14.000" data-price="14000">
+              <span class="check-label"><span data-translate="svc_skin_clean">Limpieza de Cutis</span> <span class="check-price">$14.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Hydrafacial - $16.000" data-price="16000">
+              <span class="check-label"><span data-translate="svc_hydra">Hidrafacial</span> <span class="check-price">$16.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Chemical Peel - $20.000" data-price="20000">
+              <span class="check-label"><span data-translate="svc_peel">Peeling Químico</span> <span class="check-price">$20.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Facial Massage - $10.000" data-price="10000">
+              <span class="check-label"><span data-translate="svc_facial_massage">Masaje Facial</span> <span class="check-price">$10.000</span></span>
+            </label>
+          </div>
+
+          <!-- Eyebrows -->
+          <div class="selector-group">
+            <h5 class="selector-group-title" data-translate="cat_brows">Cejas</h5>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Eyebrow Shaping - $5.000" data-price="5000">
+              <span class="check-label"><span data-translate="svc_brow_shape">Perfilado de Cejas</span> <span class="check-price">$5.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Brow Lifting - $8.000" data-price="8000">
+              <span class="check-label"><span data-translate="svc_brow_lift">Brow Lifting</span> <span class="check-price">$8.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Brow Tinting - $6.000" data-price="6000">
+              <span class="check-label"><span data-translate="svc_brow_tint">Tinte de Cejas</span> <span class="check-price">$6.000</span></span>
+            </label>
+            <label class="service-check">
+              <input type="checkbox" name="service" value="Lash Lifting - $10.000" data-price="10000">
+              <span class="check-label"><span data-translate="svc_lash_lift">Lifting de Pestañas</span> <span class="check-price">$10.000</span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="selector-total">
+          <span data-translate="booking_total">Total:</span> <span id="bookingTotal">$0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-grid container">
+      <!-- Tani -->
+      <div class="glass-card booking-card">
+        <div class="booking-avatar">
+          <img src="img/serviciosimagenes/ProfesionalFoto.jpeg" alt="Tani">
+        </div>
+        <h4 class="booking-name">Tani</h4>
+        <p class="booking-role" data-translate="booking_role_tani">Nail Artist & Especialista</p>
+        <ul class="booking-specialties">
+          <li><i class="bi bi-check2"></i> <span data-translate="spec_nails">Uñas</span></li>
+          <li><i class="bi bi-check2"></i> <span data-translate="spec_nail_art">Nail Art</span></li>
+          <li><i class="bi bi-check2"></i> <span data-translate="spec_gel">Gel & Acrílicas</span></li>
+        </ul>
+        <a href="https://calendly.com/tani-shinenails" target="_blank" rel="noopener" class="glass-btn btn-accent" data-translate="booking_schedule">
+          <i class="bi bi-calendar-check me-2"></i>AGENDAR CON TANI
+        </a>
+        <a href="#" class="glass-btn booking-wa-btn" id="waTani" data-professional="Tani">
+          <i class="bi bi-whatsapp me-2"></i>WHATSAPP
+        </a>
+      </div>
+
+      <!-- Karen -->
+      <div class="glass-card booking-card">
+        <div class="booking-avatar">
+          <img src="img/serviciosimagenes/LaminadoPerfiladoCejas.jpeg" alt="Karen">
+        </div>
+        <h4 class="booking-name">Karen</h4>
+        <p class="booking-role" data-translate="booking_role_karen">Especialista Facial & Cejas</p>
+        <ul class="booking-specialties">
+          <li><i class="bi bi-check2"></i> <span data-translate="spec_facial">Tratamientos Faciales</span></li>
+          <li><i class="bi bi-check2"></i> <span data-translate="spec_brows">Perfilado de Cejas</span></li>
+          <li><i class="bi bi-check2"></i> <span data-translate="spec_lifting">Lifting & Tinte</span></li>
+        </ul>
+        <a href="https://calendly.com/karen-shinenails" target="_blank" rel="noopener" class="glass-btn btn-accent" data-translate="booking_schedule_karen">
+          <i class="bi bi-calendar-check me-2"></i>AGENDAR CON KAREN
+        </a>
+        <a href="#" class="glass-btn booking-wa-btn" id="waKaren" data-professional="Karen">
+          <i class="bi bi-whatsapp me-2"></i>WHATSAPP
+        </a>
+      </div>
+    </div>
+
+    <p class="booking-note" data-translate="booking_note">También podés reservar por WhatsApp o por Calendly. ¿Primera vez? Te recomendamos una consulta.</p>
+  </section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="glass-footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="img/ShineLogoBM.png" alt="Shine Nails" id="footerLogo" class="footer-logo">
+        <p class="footer-text" data-translate="footer_desc">Premium nail care and beauty products. Elevate your style with our curated collections.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_links">LINKS</div>
+        <ul class="footer-links">
+          <li><a href="#services" data-translate="navbar_services">SERVICIOS</a></li>
+          <li><a href="#pricing" data-translate="navbar_pricing">PRECIOS</a></li>
+          <li><a href="#gallery" data-translate="navbar_collections">GALERÍA</a></li>
+          <li><a href="presson.html" data-translate="navbar_presson">PRESS ON</a></li>
+          <li><a href="tienda.html" data-translate="navbar_tienda">TIENDA</a></li>
+          <li><a href="courses.html" data-translate="navbar_courses">CURSOS</a></li>
+          <li><a href="#booking" data-translate="navbar_booking">TURNOS</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + Social -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_contact">CONTACT</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/543517890168" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i> +54 351 789-0168</a></li>
+          <li><a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener"><i class="bi bi-instagram me-1"></i> @shine.nails.cba</a></li>
+          <li><a href="https://maps.app.goo.gl/rGSip4wjcJRv6JXB7" target="_blank" rel="noopener"><i class="bi bi-geo-alt me-1"></i> Av. Duarte Quir&oacute;s 609, C&oacute;rdoba</a></li>
+        </ul>
+        <div class="footer-social mt-3">
+          <a href="https://www.instagram.com/shine.nails.cba?igsh=YjB5M2Z1NDIyd3B1" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/543517890168" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@shine.nails.cba?_t=8pYx1BjxAQw&_r=1" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="footer-title" data-translate="footer_location">FIND US</div>
+        <div class="footer-map glass-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5!2d-64.193!3d-31.417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2808ac972bd%3A0x55e23761ae4da07b!2sAv.%20Duarte%20Quir%C3%B3s%20609%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar"
+            width="100%" height="200" style="border:0; border-radius: 16px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+    <p class="footer-copyright" data-translate="footer_rights">&copy; 2026 Shine Nails. All rights reserved.</p>
+  </div>
+</footer>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Bootstrap Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
-<!-- Enlace al archivo JavaScript para cambio de idioma -->
+<!-- Custom JS -->
 <script src="js/index.js"></script>
 
 </body>
