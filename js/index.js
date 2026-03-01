@@ -31,15 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightLogo = "img/ShineLogoLM.png";
     const src = theme === "dark" ? darkLogo : lightLogo;
 
-    // Navbar logo
     const navLogo = document.getElementById("navLogo");
     if (navLogo) navLogo.src = src;
 
-    // Footer logo
     const footerLogo = document.getElementById("footerLogo");
     if (footerLogo) footerLogo.src = src;
 
-    // Hero logo — always white on video, use filter instead
     const heroLogo = document.getElementById("heroLogo");
     if (heroLogo) {
       heroLogo.src = darkLogo;
@@ -68,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentLanguage = selected;
             localStorage.setItem("lang", currentLanguage);
             applyTranslations(translations[currentLanguage]);
+            if (window.servicesData) renderAllFromJSON(window.servicesData);
 
             languageSelector.querySelector("img").src = selected === "es"
               ? "https://flagcdn.com/w40/ar.png"
@@ -77,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      // Set initial flag/text based on current language
       if (languageSelector) {
         languageSelector.querySelector("img").src = currentLanguage === "es"
           ? "https://flagcdn.com/w40/ar.png"
@@ -99,6 +96,300 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ========================================
+     LOAD SERVICES FROM JSON DATABASE
+     ======================================== */
+  const isEn = () => currentLanguage === "en";
+  const fmt = (n) => `$${n.toLocaleString("es-AR")}`;
+
+  fetch("data/services.json")
+    .then(r => r.json())
+    .then(data => {
+      window.servicesData = data;
+      renderAllFromJSON(data);
+    })
+    .catch(err => console.error("Error loading services:", err));
+
+  function renderAllFromJSON(data) {
+    renderServices(data);
+    renderPromos(data);
+    renderBookingSelector(data);
+    renderInfoList(data);
+  }
+
+  /* ========================================
+     RENDER SERVICES SECTION
+     ======================================== */
+  function renderServices(data) {
+    const container = document.getElementById("servicesContainer");
+    if (!container) return;
+
+    let html = "";
+
+    // --- NAILS: MANOS ---
+    html += `<div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-brush"></i> ${isEn() ? "Nails - Hands" : "Uñas - Manos"}</h3>
+      <div class="services-grid">`;
+    data.nails.manos.forEach(s => {
+      html += serviceCard(s);
+    });
+    html += `</div></div>`;
+
+    // --- NAILS: PIES ---
+    html += `<div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-brush"></i> ${isEn() ? "Nails - Feet" : "Uñas - Pies"}</h3>
+      <div class="services-grid">`;
+    data.nails.pies.forEach(s => {
+      html += serviceCard(s);
+    });
+    html += `</div></div>`;
+
+    // --- NAIL ART ---
+    html += `<div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-palette"></i> Nail Art - ${isEn() ? "Decoration" : "Decoración"}</h3>
+      <div class="nail-art-grid">`;
+    data.nails.nail_art.forEach(s => {
+      const prefix = s.from_price ? (isEn() ? "From " : "Desde ") : "";
+      const suffix = s.per_unit ? (isEn() ? " each" : " c/u") : "";
+      html += `<div class="glass-card nail-art-item">
+        <span class="nail-art-name">${isEn() ? s.name_en : s.name}</span>
+        <span class="nail-art-price">${prefix}${fmt(s.price)}${suffix}</span>
+      </div>`;
+    });
+    html += `</div></div>`;
+
+    // --- REMOCIÓN ---
+    html += `<div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-arrow-repeat"></i> ${isEn() ? "Removal, Repairs & Service Change" : "Remoción, Arreglos o Cambio de Servicio"}</h3>
+      <div class="nail-art-grid">`;
+    data.nails.remocion.forEach(s => {
+      html += `<div class="glass-card nail-art-item">
+        <span class="nail-art-name">${isEn() ? s.name_en : s.name}</span>
+        <span class="nail-art-price">${fmt(s.price)}</span>
+      </div>`;
+    });
+    html += `</div></div>`;
+
+    // --- FACIAL ---
+    html += `<div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-droplet-half"></i> ${isEn() ? "Facial Treatments" : "Tratamientos Faciales"}</h3>
+      <div class="services-grid">`;
+    data.facial.forEach(s => {
+      html += serviceCard(s);
+    });
+    html += `</div></div>`;
+
+    // --- CEJAS & PESTAÑAS ---
+    html += `<div class="services-category container">
+      <h3 class="category-title"><i class="bi bi-eye"></i> ${isEn() ? "Eyebrows & Lashes" : "Cejas y Pestañas"}</h3>
+      <div class="services-grid">`;
+    data.cejas_pestanas.forEach(s => {
+      html += serviceCard(s);
+    });
+    html += `</div></div>`;
+
+    container.innerHTML = html;
+  }
+
+  function serviceCard(s) {
+    const name = isEn() ? (s.name_en || s.name) : s.name;
+    const desc = isEn() ? (s.description_en || s.description) : s.description;
+    const premium = s.premium ? ' premium-service' : '';
+    const premiumBadge = s.premium ? `<span class="premium-badge">${isEn() ? "COMPLETE TREATMENT" : "TRATAMIENTO COMPLETO"}</span>` : '';
+
+    return `<div class="glass-card service-card has-image${premium}">
+      <div class="service-img"><img src="${s.image}" alt="${name}"></div>
+      <div class="service-body">
+        ${premiumBadge}
+        <h4 class="service-name">${name}</h4>
+        <p class="service-desc">${desc}</p>
+        <span class="service-price">${fmt(s.price)}</span>
+      </div>
+    </div>`;
+  }
+
+  /* ========================================
+     RENDER PROMOS SECTION
+     ======================================== */
+  function renderPromos(data) {
+    // Packs (Basic, Most Popular, Luxury)
+    const packsContainer = document.getElementById("promosPacksContainer");
+    if (packsContainer) {
+      let html = "";
+      data.promos_packs.forEach(pack => {
+        const featured = pack.featured ? " featured" : "";
+        const badge = pack.featured ? `<div class="pricing-badge">${isEn() ? "MOST POPULAR" : "MÁS POPULAR"}</div>` : "";
+        const name = isEn() ? pack.name_en : pack.name;
+        const desc = isEn() ? pack.description_en : pack.description;
+        const price = pack.price ? fmt(pack.price) : (isEn() ? "Ask for price" : "Consultá precio");
+        const btnClass = pack.featured ? "glass-btn btn-accent" : "glass-btn";
+
+        // Split description into service list
+        const services = desc.split(" + ");
+
+        html += `<div class="glass-card pricing-card${featured}">
+          ${badge}
+          <div class="pricing-header">
+            <h4 class="pricing-name">${name}</h4>
+            <div class="pricing-price">${price}</div>
+            <p class="pricing-period">${isEn() ? "cash / transfer" : "efectivo / transferencia"}</p>
+          </div>
+          <ul class="pricing-features">
+            ${services.map(s => `<li><i class="bi bi-check-circle-fill"></i> <span>${s.trim()}</span></li>`).join("")}
+          </ul>
+          <a href="#booking" class="${btnClass}">${isEn() ? "BOOK NOW" : "RESERVAR"}</a>
+        </div>`;
+      });
+      packsContainer.innerHTML = html;
+    }
+
+    // Individual combos
+    const combosContainer = document.getElementById("promosCombosContainer");
+    if (combosContainer) {
+      let html = "";
+      data.promos.forEach(promo => {
+        const name = isEn() ? promo.name_en : promo.name;
+        const desc = isEn() ? promo.description_en : promo.description;
+
+        html += `<div class="glass-card promo-combo-card">
+          <div class="promo-combo-info">
+            <h5 class="promo-combo-name">${name}</h5>
+            <p class="promo-combo-desc">${desc}</p>
+          </div>
+          <div class="promo-combo-price">${fmt(promo.price)}</div>
+        </div>`;
+      });
+      combosContainer.innerHTML = html;
+    }
+  }
+
+  /* ========================================
+     RENDER BOOKING SELECTOR FROM JSON
+     ======================================== */
+  function renderBookingSelector(data) {
+    const columns = document.getElementById("selectorColumns");
+    if (!columns) return;
+
+    let html = "";
+
+    // Nails (manos + pies combined)
+    html += `<div class="selector-group">
+      <h5 class="selector-group-title">${isEn() ? "Nails" : "Uñas"}</h5>
+      <h6 class="selector-subgroup">${isEn() ? "Hands" : "Manos"}</h6>`;
+    data.nails.manos.forEach(s => {
+      html += selectorCheckbox(s);
+    });
+    html += `<h6 class="selector-subgroup">${isEn() ? "Feet" : "Pies"}</h6>`;
+    data.nails.pies.forEach(s => {
+      html += selectorCheckbox(s);
+    });
+    html += `</div>`;
+
+    // Facial
+    html += `<div class="selector-group">
+      <h5 class="selector-group-title">${isEn() ? "Facial Treatments" : "Tratamientos Faciales"}</h5>`;
+    data.facial.forEach(s => {
+      html += selectorCheckbox(s);
+    });
+    html += `</div>`;
+
+    // Eyebrows & Lashes
+    html += `<div class="selector-group">
+      <h5 class="selector-group-title">${isEn() ? "Eyebrows & Lashes" : "Cejas y Pestañas"}</h5>`;
+    data.cejas_pestanas.forEach(s => {
+      html += selectorCheckbox(s);
+    });
+    html += `</div>`;
+
+    columns.innerHTML = html;
+
+    // Re-bind checkbox events
+    bindBookingEvents();
+  }
+
+  function selectorCheckbox(s) {
+    const name = isEn() ? (s.name_en || s.name) : s.name;
+    return `<label class="service-check">
+      <input type="checkbox" name="service" value="${name} - ${fmt(s.price)}" data-price="${s.price}">
+      <span class="check-label"><span>${name}</span> <span class="check-price">${fmt(s.price)}</span></span>
+    </label>`;
+  }
+
+  /* ========================================
+     RENDER INFO LIST (language-aware)
+     ======================================== */
+  function renderInfoList(data) {
+    const list = document.getElementById("infoList");
+    if (!list || !data.info_importante) return;
+
+    const items = isEn() ? data.info_importante.en : data.info_importante.es;
+    const icons = [
+      "bi-cash-coin", "bi-clock", "bi-calendar-x", "bi-person-x",
+      "bi-image", "bi-shop", "bi-percent", "bi-credit-card"
+    ];
+
+    list.innerHTML = items.map((text, i) =>
+      `<li><i class="bi ${icons[i] || 'bi-info-circle'}"></i> <span>${text}</span></li>`
+    ).join("");
+  }
+
+  /* ========================================
+     BOOKING SERVICE SELECTOR + WHATSAPP
+     ======================================== */
+  const bookingTotal = document.getElementById("bookingTotal");
+  const waTani = document.getElementById("waTani");
+  const waKaren = document.getElementById("waKaren");
+
+  function bindBookingEvents() {
+    const checkboxes = document.querySelectorAll('#serviceSelector input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+      cb.addEventListener("change", updateTotal);
+    });
+  }
+
+  function getSelectedServices() {
+    const checkboxes = document.querySelectorAll('#serviceSelector input[type="checkbox"]');
+    const selected = [];
+    let total = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked) {
+        selected.push(cb.value);
+        total += parseInt(cb.dataset.price) || 0;
+      }
+    });
+    return { selected, total };
+  }
+
+  function updateTotal() {
+    const { total } = getSelectedServices();
+    if (bookingTotal) bookingTotal.textContent = fmt(total);
+  }
+
+  function buildWhatsAppUrl(professional) {
+    const { selected, total } = getSelectedServices();
+    let msg = `Hola! Quiero reservar un turno con ${professional}.`;
+    if (selected.length > 0) {
+      msg += `\n\nServicios seleccionados:\n`;
+      selected.forEach(s => { msg += `\u2022 ${s}\n`; });
+      msg += `\nTotal estimado: ${fmt(total)}`;
+    }
+    return `https://wa.me/543517890168?text=${encodeURIComponent(msg)}`;
+  }
+
+  if (waTani) {
+    waTani.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.open(buildWhatsAppUrl("Tani"), "_blank");
+    });
+  }
+
+  if (waKaren) {
+    waKaren.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.open(buildWhatsAppUrl("Karen"), "_blank");
+    });
+  }
+
+  /* ========================================
      PRODUCTS CAROUSEL
      ======================================== */
   const track = document.querySelector(".carousel-track");
@@ -112,7 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let cardsPerView = getCardsPerView();
     let totalPages = Math.ceil(cards.length / cardsPerView);
 
-    // Build dots
     function buildDots() {
       dotsContainer.innerHTML = "";
       for (let i = 0; i < totalPages; i++) {
@@ -146,7 +436,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const offset = targetIndex * getCardWidth();
       track.style.transform = `translateX(-${offset}px)`;
 
-      // Update dots
       dotsContainer.querySelectorAll(".carousel-dot").forEach((dot, i) => {
         dot.classList.toggle("active", i === currentIndex);
       });
@@ -165,7 +454,6 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", prev);
     nextBtn.addEventListener("click", next);
 
-    // Swipe support
     let startX = 0;
     let isDragging = false;
 
@@ -183,7 +471,6 @@ document.addEventListener("DOMContentLoaded", () => {
       isDragging = false;
     }, { passive: true });
 
-    // Mouse drag support
     track.addEventListener("mousedown", (e) => {
       startX = e.clientX;
       isDragging = true;
@@ -199,7 +486,6 @@ document.addEventListener("DOMContentLoaded", () => {
       isDragging = false;
     });
 
-    // Recalculate on resize
     let resizeTimer;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
@@ -211,7 +497,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 200);
     });
 
-    // Auto-play
     let autoPlay = setInterval(next, 5000);
 
     track.parentElement.parentElement.addEventListener("mouseenter", () => {
@@ -222,63 +507,8 @@ document.addEventListener("DOMContentLoaded", () => {
       autoPlay = setInterval(next, 5000);
     });
 
-    // Init
     buildDots();
     goToPage(0);
-  }
-
-  /* ========================================
-     BOOKING SERVICE SELECTOR + WHATSAPP
-     ======================================== */
-  const serviceCheckboxes = document.querySelectorAll('#serviceSelector input[type="checkbox"]');
-  const bookingTotal = document.getElementById("bookingTotal");
-  const waTani = document.getElementById("waTani");
-  const waKaren = document.getElementById("waKaren");
-
-  function getSelectedServices() {
-    const selected = [];
-    let total = 0;
-    serviceCheckboxes.forEach(cb => {
-      if (cb.checked) {
-        selected.push(cb.value);
-        total += parseInt(cb.dataset.price) || 0;
-      }
-    });
-    return { selected, total };
-  }
-
-  function updateTotal() {
-    const { total } = getSelectedServices();
-    bookingTotal.textContent = `$${total.toLocaleString("es-AR")}`;
-  }
-
-  function buildWhatsAppUrl(professional) {
-    const { selected, total } = getSelectedServices();
-    let msg = `Hola! Quiero reservar un turno con ${professional}.`;
-    if (selected.length > 0) {
-      msg += `\n\nServicios seleccionados:\n`;
-      selected.forEach(s => { msg += `• ${s}\n`; });
-      msg += `\nTotal estimado: $${total.toLocaleString("es-AR")}`;
-    }
-    return `https://wa.me/543517890168?text=${encodeURIComponent(msg)}`;
-  }
-
-  serviceCheckboxes.forEach(cb => {
-    cb.addEventListener("change", updateTotal);
-  });
-
-  if (waTani) {
-    waTani.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.open(buildWhatsAppUrl("Tani"), "_blank");
-    });
-  }
-
-  if (waKaren) {
-    waKaren.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.open(buildWhatsAppUrl("Karen"), "_blank");
-    });
   }
 
   /* ========================================
@@ -293,7 +523,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: "smooth" });
 
-        // Close mobile nav if open
         const navCollapse = document.getElementById("navMenu");
         if (navCollapse && navCollapse.classList.contains("show")) {
           const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
