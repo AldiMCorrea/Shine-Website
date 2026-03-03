@@ -90,11 +90,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-translate]").forEach(el => {
       const key = el.getAttribute("data-translate");
       if (texts[key]) {
-        // Preserve child elements (e.g. coming-soon badges inside nav links)
         if (el.children.length > 0) {
-          const firstText = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
-          if (firstText) firstText.textContent = texts[key] + " ";
-          else el.prepend(document.createTextNode(texts[key] + " "));
+          // Save child elements, clear everything, re-insert
+          const children = Array.from(el.children);
+          el.textContent = texts[key];
+          children.forEach(child => {
+            if (child.classList.contains('coming-soon-badge')) {
+              el.append(document.createTextNode(" "));
+              el.append(child);
+            } else {
+              el.prepend(child);
+            }
+          });
         } else {
           el.textContent = texts[key];
         }
