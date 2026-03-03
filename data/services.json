@@ -8,7 +8,8 @@
         "description": "Limpieza, corte y moldeado de uñas de manos sin esmaltado.",
         "description_en": "Hand nail cleaning, cutting and shaping without polish.",
         "price": 23000,
-        "image": "img/serviciosimagenes/Pedicure3.jpeg"
+        "image": "img/shinefotos/1.ManicuraSinEsmaltado.jpeg",
+        "object_position": "center 30%"
       },
       {
         "id": "esmaltado_semi_manos",
@@ -16,8 +17,8 @@
         "name_en": "Semi-Permanent Polish",
         "description": "Esmaltado semipermanente de larga duración con acabado espejo.",
         "description_en": "Long-lasting semi-permanent polish with mirror finish.",
-        "price": 25000,
-        "image": "img/serviciosimagenes/Pedicure3.jpeg"
+        "price": 31000,
+        "image": "img/shinefotos/2.EsmaltadoSemiPermanente.jpg"
       },
       {
         "id": "capping",
@@ -26,7 +27,8 @@
         "description": "Cobertura de gel para fortalecer y proteger la uña natural.",
         "description_en": "Gel coating to strengthen and protect the natural nail.",
         "price": 35000,
-        "image": "img/img5.svg"
+        "image": "img/shinefotos/3.Capping.jpeg",
+        "object_position": "center 30%"
       },
       {
         "id": "extensiones_softgel",
@@ -35,7 +37,8 @@
         "description": "Extensiones de uñas SoftGel con acabado natural y duradero.",
         "description_en": "SoftGel nail extensions with natural, long-lasting finish.",
         "price": 37000,
-        "image": "img/serviciosimagenes/Pedicure2.jpeg"
+        "image": "img/shinefotos/4.ExtensionSoftGel.jpg",
+        "object_position": "center 30%"
       },
       {
         "id": "extensiones_softgel_xl",
@@ -44,7 +47,8 @@
         "description": "Extensiones SoftGel extra largas para un look audaz.",
         "description_en": "Extra-long SoftGel extensions for a bold look.",
         "price": 39000,
-        "image": "img/serviciosimagenes/Pedicure2.jpeg"
+        "image": "img/shinefotos/5.ExtensionSoftGelXL.jpg",
+        "object_position": "center 25%"
       },
       {
         "id": "esculpidas",
@@ -53,7 +57,8 @@
         "description": "Uñas esculpidas a medida con técnica escultural profesional.",
         "description_en": "Custom sculpted nails with professional sculptural technique.",
         "price": 41000,
-        "image": "img/serviciosimagenes/Pedicure2.jpeg"
+        "image": "img/shinefotos/6.EsculpidasEsculturales.jpeg",
+        "object_position": "center 35%"
       }
     ],
     "pies": [
@@ -64,7 +69,7 @@
         "description": "Limpieza, corte y moldeado de uñas de pies sin esmaltado.",
         "description_en": "Foot nail cleaning, cutting and shaping without polish.",
         "price": 23000,
-        "image": "img/serviciosimagenes/Pedicure1.jpeg"
+        "image": "img/shinefotos/6.PedicuraSinEsmaltado.jpeg"
       },
       {
         "id": "esmaltado_semi_pies",
@@ -72,8 +77,9 @@
         "name_en": "Semi-Permanent Polish",
         "description": "Esmaltado semipermanente en pies con acabado duradero.",
         "description_en": "Semi-permanent polish on feet with long-lasting finish.",
-        "price": 27000,
-        "image": "img/serviciosimagenes/Pedicure1.jpeg"
+        "price": 31000,
+        "image": "img/shinefotos/8.EsmaltadoSemiPies.jpeg",
+        "object_position": "center 25%"
       },
       {
         "id": "podoestetica",
@@ -81,8 +87,9 @@
         "name_en": "Podiatric Aesthetics Add-on",
         "description": "Tratamiento podoestético adicional para el cuidado de los pies.",
         "description_en": "Additional podiatric aesthetic treatment for foot care.",
-        "price": 13000,
-        "image": "img/serviciosimagenes/Pedicure1.jpeg"
+        "price": 23000,
+        "image": "img/shinefotos/9.PodoEstetica.jpeg",
+        "object_position": "center 45%"
       },
       {
         "id": "reconstruccion_unas",
@@ -90,8 +97,8 @@
         "name_en": "Nail Reconstruction (each)",
         "description": "Reconstrucción individual de uña dañada o rota.",
         "description_en": "Individual reconstruction of damaged or broken nail.",
-        "price": 2000,
-        "image": "img/serviciosimagenes/Pedicure1.jpeg"
+        "price": 3000,
+        "image": "img/shinefotos/10.ResconstruccionUnia.jpeg"
       },
       {
         "id": "refuerzo_unas",
@@ -99,8 +106,8 @@
         "name_en": "Nail Reinforcement (each)",
         "description": "Refuerzo individual para uñas débiles o quebradizas.",
         "description_en": "Individual reinforcement for weak or brittle nails.",
-        "price": 1500,
-        "image": "img/serviciosimagenes/Pedicure1.jpeg"
+        "price": 2500,
+        "image": "img/shinefotos/11.RefuerzoUnia.jpeg"
       }
     ],
     "nail_art": [
@@ -221,7 +228,8 @@
       "description": "Tratamiento de hidratación intensiva para un cutis radiante y luminoso.",
       "description_en": "Intensive hydration treatment for a radiant and luminous complexion.",
       "price": 28000,
-      "image": "img/serviciosimagenes/LimpiezaFacial1.jpeg"
+      "image": "img/serviciosimagenes/LimpiezaFacial1.jpeg",
+      "object_position": "center 45%"
     },
     {
       "id": "masaje_facial_guasha",
@@ -230,7 +238,8 @@
       "description": "Masaje facial relajante con técnica Gua Sha para tonificar y rejuvenecer.",
       "description_en": "Relaxing facial massage with Gua Sha technique to tone and rejuvenate.",
       "price": 24000,
-      "image": "img/serviciosimagenes/NuestroSalon.jpeg"
+      "image": "img/shinefotos/14.MasajeGuasha.jpeg",
+      "object_position": "center 60%"
     },
     {
       "id": "limpieza_facial_premium",
@@ -240,6 +249,7 @@
       "description_en": "Complete treatment including: Skin Cleansing + HydraFacial + Gua Sha Facial Massage.",
       "price": 54000,
       "image": "img/serviciosimagenes/LimpiezaFacial3.jpeg",
+      "object_position": "center 55%",
       "premium": true
     }
   ],
@@ -251,7 +261,7 @@
       "description": "Lifting y tinte nutritivo de pestañas para una mirada abierta y definida.",
       "description_en": "Nourishing lash lift and tint for an open, defined look.",
       "price": 27000,
-      "image": "img/serviciosimagenes/LiftingDePestanas.jpeg"
+      "image": "img/shinefotos/16.LiftingNutritivo.jpeg"
     },
     {
       "id": "perfilado_cejas",
@@ -260,7 +270,8 @@
       "description": "Perfilado preciso con cera o hilo para el arco perfecto.",
       "description_en": "Precise brow shaping with wax or thread for the perfect arch.",
       "price": 13000,
-      "image": "img/serviciosimagenes/PerfiladoCejas.jpeg"
+      "image": "img/serviciosimagenes/PerfiladoCejas.jpeg",
+      "object_position": "center 40%"
     },
     {
       "id": "diseno_perfilado_tinte",
@@ -269,7 +280,8 @@
       "description": "Diseño personalizado de cejas con perfilado y tinte profesional.",
       "description_en": "Custom brow design with professional shaping and tint.",
       "price": 17000,
-      "image": "img/serviciosimagenes/PerfiladoCejas2.jpeg"
+      "image": "img/serviciosimagenes/PerfiladoCejas2.jpeg",
+      "object_position": "center 30%"
     },
     {
       "id": "laminado_cejas",
@@ -278,7 +290,8 @@
       "description": "Laminado nutritivo para levantar y fijar las cejas por semanas.",
       "description_en": "Nourishing lamination to lift and set brows in place for weeks.",
       "price": 17000,
-      "image": "img/serviciosimagenes/LaminacionCejas.jpeg"
+      "image": "img/serviciosimagenes/LaminacionCejas.jpeg",
+      "object_position": "center 33%"
     },
     {
       "id": "perfilado_laminado",
@@ -287,7 +300,8 @@
       "description": "Combo perfilado de cejas con laminado nutritivo.",
       "description_en": "Brow shaping combo with nourishing lamination.",
       "price": 23000,
-      "image": "img/serviciosimagenes/LaminadoPerfiladoCejas.jpeg"
+      "image": "img/serviciosimagenes/LaminadoPerfiladoCejas.jpeg",
+      "object_position": "center 40%"
     },
     {
       "id": "tinte_henna",
@@ -296,7 +310,8 @@
       "description": "Tinte o henna semipermanente para cejas más llenas y definidas.",
       "description_en": "Semi-permanent tint or henna for fuller, more defined brows.",
       "price": 7000,
-      "image": "img/serviciosimagenes/PerfiladoCejas2.jpeg"
+      "image": "img/serviciosimagenes/PerfiladoCejas2.jpeg",
+      "object_position": "center 30%"
     }
   ],
   "promos": [
@@ -308,7 +323,8 @@
       "description_en": "Soft Gel Extensions on hands + Semi-Permanent Polish on feet.",
       "services": ["extensiones_softgel", "esmaltado_semi_pies"],
       "price": 62300,
-      "savings": 1700
+      "original_price": 68000,
+      "savings": 5700
     },
     {
       "id": "promo_manos_pies_lifting",
@@ -318,8 +334,8 @@
       "description_en": "Semi-Permanent Polish on hands and feet + Lash Lifting.",
       "services": ["esmaltado_semi_manos", "esmaltado_semi_pies", "lifting_pestanas"],
       "price": 79800,
-      "original_price": 79000,
-      "savings": 0
+      "original_price": 89000,
+      "savings": 9200
     },
     {
       "id": "promo_manos_pies_capping_lifting",
@@ -329,7 +345,8 @@
       "description_en": "Capping Gel Polish on hands and feet + Lash Lifting.",
       "services": ["capping", "esmaltado_semi_pies", "lifting_pestanas"],
       "price": 83700,
-      "savings": 0
+      "original_price": 93000,
+      "savings": 9300
     },
     {
       "id": "promo_lifting_perfilado_laminado_tinte",
@@ -350,8 +367,8 @@
       "description_en": "Facial Cleansing + Lash Lifting + Semi-Permanent Polish on hands.",
       "services": ["limpieza_cutis", "lifting_pestanas", "esmaltado_semi_manos"],
       "price": 77400,
-      "original_price": 80000,
-      "savings": 2600
+      "original_price": 86000,
+      "savings": 8600
     }
   ],
   "promos_packs": [

@@ -90,7 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-translate]").forEach(el => {
       const key = el.getAttribute("data-translate");
       if (texts[key]) {
-        el.textContent = texts[key];
+        // Preserve child elements (e.g. coming-soon badges inside nav links)
+        if (el.children.length > 0) {
+          const firstText = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+          if (firstText) firstText.textContent = texts[key] + " ";
+          else el.prepend(document.createTextNode(texts[key] + " "));
+        } else {
+          el.textContent = texts[key];
+        }
       }
     });
   }
@@ -196,8 +203,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const premium = s.premium ? ' premium-service' : '';
     const premiumBadge = s.premium ? `<span class="premium-badge">${isEn() ? "COMPLETE TREATMENT" : "TRATAMIENTO COMPLETO"}</span>` : '';
 
+    const posStyle = s.object_position ? ` style="object-position:${s.object_position}"` : '';
+    const media = s.video
+      ? `<video autoplay loop muted playsinline${posStyle}><source src="${s.image}" type="video/mp4"></video>`
+      : `<img src="${s.image}" alt="${name}"${posStyle}>`;
+
     return `<div class="glass-card service-card has-image${premium}">
-      <div class="service-img"><img src="${s.image}" alt="${name}"></div>
+      <div class="service-img">${media}</div>
       <div class="service-body">
         ${premiumBadge}
         <h4 class="service-name">${name}</h4>
@@ -269,37 +281,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const columns = document.getElementById("selectorColumns");
     if (!columns) return;
 
-    let html = "";
+    const categories = [
+      { key: "manos",    icon: "bi-hand-index-thumb", labelEs: "Manos",               labelEn: "Hands",              items: data.nails.manos },
+      { key: "pies",     icon: "bi-footprints",       labelEs: "Pies",                labelEn: "Feet",               items: data.nails.pies },
+      { key: "nailart",  icon: "bi-palette",          labelEs: "Nail Art",            labelEn: "Nail Art",           items: data.nails.nail_art },
+      { key: "remocion", icon: "bi-arrow-repeat",     labelEs: "Remoción",            labelEn: "Removal",            items: data.nails.remocion },
+      { key: "facial",   icon: "bi-droplet-half",     labelEs: "Tratamientos Faciales", labelEn: "Facial Treatments", items: data.facial },
+      { key: "cejas",    icon: "bi-eye",              labelEs: "Cejas y Pestañas",    labelEn: "Eyebrows & Lashes",  items: data.cejas_pestanas },
+      { key: "promos",   icon: "bi-tag",              labelEs: "Promos",              labelEn: "Promos",             items: data.promos },
+      { key: "packs",    icon: "bi-box-seam",         labelEs: "Packs",               labelEn: "Packs",              items: data.promos_packs },
+    ];
 
-    // Nails (manos + pies combined)
-    html += `<div class="selector-group">
-      <h5 class="selector-group-title">${isEn() ? "Nails" : "Uñas"}</h5>
-      <h6 class="selector-subgroup">${isEn() ? "Hands" : "Manos"}</h6>`;
-    data.nails.manos.forEach(s => {
-      html += selectorCheckbox(s);
-    });
-    html += `<h6 class="selector-subgroup">${isEn() ? "Feet" : "Pies"}</h6>`;
-    data.nails.pies.forEach(s => {
-      html += selectorCheckbox(s);
-    });
-    html += `</div>`;
+    let html = '<div class="glass-accordion" id="bookingAccordion">';
 
-    // Facial
-    html += `<div class="selector-group">
-      <h5 class="selector-group-title">${isEn() ? "Facial Treatments" : "Tratamientos Faciales"}</h5>`;
-    data.facial.forEach(s => {
-      html += selectorCheckbox(s);
-    });
-    html += `</div>`;
+    categories.forEach((cat, i) => {
+      const label = isEn() ? cat.labelEn : cat.labelEs;
+      const collapseId = `collapse-${cat.key}`;
+      const headerId = `header-${cat.key}`;
 
-    // Eyebrows & Lashes
-    html += `<div class="selector-group">
-      <h5 class="selector-group-title">${isEn() ? "Eyebrows & Lashes" : "Cejas y Pestañas"}</h5>`;
-    data.cejas_pestanas.forEach(s => {
-      html += selectorCheckbox(s);
-    });
-    html += `</div>`;
+      let checkboxes = "";
+      cat.items.forEach(s => { checkboxes += selectorCheckbox(s); });
 
+      html += `
+        <div class="accordion-item glass-accordion-item" data-category="${cat.key}">
+          <h2 class="accordion-header" id="${headerId}">
+            <button class="accordion-button glass-accordion-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#${collapseId}"
+                    aria-expanded="false"
+                    aria-controls="${collapseId}">
+              <i class="bi ${cat.icon} accordion-cat-icon"></i>
+              <span class="accordion-cat-label">${label}</span>
+              <span class="accordion-badge" id="badge-${cat.key}"></span>
+            </button>
+          </h2>
+          <div id="${collapseId}" class="accordion-collapse collapse"
+               aria-labelledby="${headerId}">
+            <div class="accordion-body glass-accordion-body">
+              ${checkboxes}
+            </div>
+          </div>
+        </div>`;
+    });
+
+    html += '</div>';
     columns.innerHTML = html;
 
     // Re-bind checkbox events
@@ -308,9 +334,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function selectorCheckbox(s) {
     const name = isEn() ? (s.name_en || s.name) : s.name;
+    const perNail = s.per_nail ? (isEn() ? "/nail" : "/uña") : "";
+    const fromPrefix = s.from_price ? (isEn() ? "From " : "Desde ") : "";
+    const priceLabel = `${fromPrefix}${fmt(s.price)}${perNail}`;
     return `<label class="service-check">
-      <input type="checkbox" name="service" value="${name} - ${fmt(s.price)}" data-price="${s.price}">
-      <span class="check-label"><span>${name}</span> <span class="check-price">${fmt(s.price)}</span></span>
+      <input type="checkbox" name="service" value="${name} - ${priceLabel}" data-price="${s.price}">
+      <span class="check-label"><span>${name}</span> <span class="check-price">${priceLabel}</span></span>
     </label>`;
   }
 
@@ -362,6 +391,33 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateTotal() {
     const { total } = getSelectedServices();
     if (bookingTotal) bookingTotal.textContent = fmt(total);
+
+    // Update per-category badges
+    document.querySelectorAll('.glass-accordion-item').forEach(item => {
+      const key = item.dataset.category;
+      const badge = document.getElementById(`badge-${key}`);
+      if (!badge) return;
+
+      const checks = item.querySelectorAll('input[type="checkbox"]');
+      let count = 0, subtotal = 0;
+      checks.forEach(cb => {
+        if (cb.checked) {
+          count++;
+          subtotal += parseInt(cb.dataset.price) || 0;
+        }
+      });
+
+      if (count > 0) {
+        const label = isEn()
+          ? `${count} selected - ${fmt(subtotal)}`
+          : `${count} seleccionado${count > 1 ? "s" : ""} - ${fmt(subtotal)}`;
+        badge.textContent = label;
+        badge.classList.add("visible");
+      } else {
+        badge.textContent = "";
+        badge.classList.remove("visible");
+      }
+    });
   }
 
   function buildWhatsAppUrl(professional) {
@@ -378,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (waTani) {
     waTani.addEventListener("click", (e) => {
       e.preventDefault();
-      window.open(buildWhatsAppUrl("Tani"), "_blank");
+      window.open(buildWhatsAppUrl("Tania"), "_blank");
     });
   }
 
@@ -510,6 +566,23 @@ document.addEventListener("DOMContentLoaded", () => {
     buildDots();
     goToPage(0);
   }
+
+  /* ========================================
+     COMING SOON MODAL (blocked sections)
+     ======================================== */
+  const comingSoonModal = new bootstrap.Modal(document.getElementById("comingSoonModal"));
+  document.querySelectorAll(".coming-soon-link").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      comingSoonModal.show();
+      // Close mobile nav if open
+      const navCollapse = document.getElementById("navMenu");
+      if (navCollapse && navCollapse.classList.contains("show")) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    });
+  });
 
   /* ========================================
      SMOOTH SCROLL FOR NAV LINKS
