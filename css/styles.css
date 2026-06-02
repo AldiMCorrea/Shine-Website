@@ -762,6 +762,20 @@ a {
   margin-bottom: 10px;
 }
 
+.booking-schedule-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.booking-schedule-label i {
+  color: var(--accent);
+}
+
 .booking-wa-btn {
   background: transparent;
   border-color: #25D366;
