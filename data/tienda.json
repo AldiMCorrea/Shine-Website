@@ -1,0 +1,308 @@
+{
+  "internacional": [
+    {
+      "id": "to_niacinamide",
+      "name": "Niacinamide 10% + Zinc 1%",
+      "name_en": "Niacinamide 10% + Zinc 1%",
+      "brand": "The Ordinary",
+      "description": "Sérum concentrado que reduce poros, controla oleosidad y mejora textura. El más vendido del mundo — 30ml.",
+      "description_en": "Concentrated serum that reduces pores, controls oiliness and improves texture. The world's best seller — 30ml.",
+      "price": 32000,
+      "image": "img/tienda/TheOrdinary-Niacinamida.png",
+      "images": [
+        "img/tienda/TheOrdinary-Niacinamida.png",
+        "img/tienda/TheOrdinary-Niacinamida2.png"
+      ],
+      "origin": "USA"
+    },
+    {
+      "id": "to_hyaluronic",
+      "name": "Ácido Hialurónico 2% + B5",
+      "name_en": "Hyaluronic Acid 2% + B5",
+      "brand": "The Ordinary",
+      "description": "Hidratación profunda en múltiples capas de la piel. Con vitamina B5 para reparación. Apto para todo tipo de piel — 30ml.",
+      "description_en": "Deep hydration across multiple skin layers. With vitamin B5 for repair. Suitable for all skin types — 30ml.",
+      "price": 34000,
+      "image": "img/tienda/TheOrdinary-Hyaluronic.png",
+      "images": [
+        "img/tienda/TheOrdinary-Hyaluronic.png",
+        "img/tienda/TheOrdinary-Hyaluronic2.png"
+      ],
+      "origin": "USA"
+    },
+    {
+      "id": "to_aha_bha_peeling",
+      "name": "AHA 30% + BHA 2% Peeling Solution",
+      "name_en": "AHA 30% + BHA 2% Peeling Solution",
+      "brand": "The Ordinary",
+      "description": "El famoso peeling exfoliante. 10 minutos para una piel más luminosa, suave y renovada. Uso semanal — 30ml.",
+      "description_en": "The famous exfoliating peel. 10 minutes for brighter, smoother, renewed skin. Weekly use — 30ml.",
+      "price": 42000,
+      "image": "img/tienda/TheOrdinary-AHAPeeling.png",
+      "images": [
+        "img/tienda/TheOrdinary-AHAPeeling.png",
+        "img/tienda/TheOrdinary-AHAPeeling2.png"
+      ],
+      "origin": "USA"
+    },
+    {
+      "id": "to_squalane_cleanser",
+      "name": "Squalane Cleanser",
+      "name_en": "Squalane Cleanser",
+      "brand": "The Ordinary",
+      "description": "Limpiador suave con escualano que disuelve maquillaje e impurezas sin resecar. Textura bálsamo que se transforma en aceite — 150ml.",
+      "description_en": "Gentle squalane cleanser that dissolves makeup and impurities without drying. Balm-to-oil texture — 150ml.",
+      "price": 65000,
+      "image": "img/tienda/TheOrdinary-Cleanser.png",
+      "images": [
+        "img/tienda/TheOrdinary-Cleanser.png",
+        "img/tienda/TheOrdinary-Cleanser2.png"
+      ],
+      "origin": "USA"
+    },
+    {
+      "id": "to_nmf",
+      "name": "Natural Moisturizing Factors + HA",
+      "name_en": "Natural Moisturizing Factors + HA",
+      "brand": "The Ordinary",
+      "description": "Crema hidratante con aminoácidos, ceramidas y ácido hialurónico. Hidratación no grasa para uso diario — 100ml.",
+      "description_en": "Moisturizer with amino acids, ceramides and hyaluronic acid. Non-greasy daily hydration — 100ml.",
+      "price": 58000,
+      "image": "img/tienda/TheOrdinary-Moisturizing.png",
+      "images": [
+        "img/tienda/TheOrdinary-Moisturizing.png",
+        "img/tienda/TheOrdinary-Moisturizing2.png"
+      ],
+      "origin": "USA"
+    },
+    {
+      "id": "to_glycolic",
+      "name": "Glycolic Acid 7% Toning Solution",
+      "name_en": "Glycolic Acid 7% Toning Solution",
+      "brand": "The Ordinary",
+      "description": "Tónico exfoliante con ácido glicólico al 7%. Mejora textura, luminosidad y tono. Uso nocturno — 240ml.",
+      "description_en": "Exfoliating toner with 7% glycolic acid. Improves texture, luminosity and tone. Nighttime use — 240ml.",
+      "price": 48000,
+      "image": "img/tienda/TheOrdinary-GlycolicAcidToner.png",
+      "images": [
+        "img/tienda/TheOrdinary-GlycolicAcidToner.png",
+        "img/tienda/TheOrdinary-GlycolicAcidToner2.png",
+        "img/tienda/TheOrdinary-GlycolicAcidToner3.png"
+      ],
+      "origin": "USA"
+    },
+    {
+      "id": "to_caffeine",
+      "name": "Caffeine Solution 5% + EGCG",
+      "name_en": "Caffeine Solution 5% + EGCG",
+      "brand": "The Ordinary",
+      "description": "Sérum concentrado de cafeína para reducir ojeras e hinchazón del contorno de ojos. Resultados visibles — 30ml.",
+      "description_en": "Concentrated caffeine serum to reduce dark circles and puffiness around the eyes. Visible results — 30ml.",
+      "price": 36000,
+      "image": "img/tienda/TheOrdinary-CaffeineSolutions.png",
+      "images": [
+        "img/tienda/TheOrdinary-CaffeineSolutions.png",
+        "img/tienda/TheOrdinary-CaffeineSolutions2.png",
+        "img/tienda/TheOrdinary-CaffeineSolutions3.png"
+      ],
+      "origin": "USA"
+    }
+  ],
+  "combos": [
+    {
+      "id": "idraet_limpieza_x6",
+      "name": "Kit Rutina Limpieza e Hidratación x6",
+      "name_en": "Cleansing & Hydration Routine Kit x6",
+      "brand": "Idraet",
+      "description": "Leche limpiadora, gel purificante, tónico, crema hidratante y más. Rutina completa para todo tipo de piel.",
+      "description_en": "Cleansing milk, purifying gel, toner, moisturizer and more. Complete routine for all skin types.",
+      "price": 85000,
+      "image": "img/tienda/idraet-kit-3.jpg",
+      "origin": "Argentina"
+    },
+    {
+      "id": "idraet_vitamina_c",
+      "name": "Rutina Vitamina C — Piel Mixta",
+      "name_en": "Vitamin C Routine — Combination Skin",
+      "brand": "Idraet",
+      "description": "Crema hidratante ligera + Sérum células madre con Vitamina C. Luminosidad y renovación celular para piel mixta.",
+      "description_en": "Light moisturizer + Stem cell serum with Vitamin C. Luminosity and cell renewal for combination skin.",
+      "price": 110000,
+      "image": "img/tienda/idraet-kit-4.jpg",
+      "origin": "Argentina"
+    },
+    {
+      "id": "idraet_peeling_x8",
+      "name": "Kit Peeling Glicólico y Mandélico x8",
+      "name_en": "Glycolic & Mandelic Peeling Kit x8",
+      "brand": "Idraet",
+      "description": "Kit profesional completo: peeling glicólico, mandélico, pre-peel, neutralizador, hidratante. Renovación profunda.",
+      "description_en": "Complete professional kit: glycolic peel, mandelic peel, pre-peel, neutralizer, moisturizer. Deep renewal.",
+      "price": 135000,
+      "image": "img/tienda/idraet-kit-5.jpg",
+      "origin": "Argentina"
+    },
+    {
+      "id": "combo_duo_hidratacion",
+      "name": "Combo Duo Hidratación Básica",
+      "name_en": "Basic Hydration Duo Combo",
+      "brand": "The Ordinary",
+      "description": "Niacinamide 10% + Zinc 1% (30ml) + Ácido Hialurónico 2% + B5 (30ml). El dúo más popular para piel hidratada.",
+      "description_en": "Niacinamide 10% + Zinc 1% (30ml) + Hyaluronic Acid 2% + B5 (30ml). The most popular duo for hydrated skin.",
+      "price": 60000,
+      "image": "img/tienda/combo-duo-hidratacion.jpg",
+      "origin": "USA"
+    }
+  ],
+  "insumos": [
+    {
+      "id": "guasha_rosa",
+      "name": "Gua Sha Cuarzo Rosa",
+      "name_en": "Rose Quartz Gua Sha",
+      "brand": "Gua Sha",
+      "description": "Piedra de cuarzo rosa para masaje facial. Drenaje linfático, deshincha y esculpe el rostro. Propiedades calmantes.",
+      "description_en": "Rose quartz stone for facial massage. Lymphatic drainage, reduces puffiness and sculpts the face. Calming properties.",
+      "price": 22000,
+      "image": "img/tienda/guashacuarzorosa.png",
+      "images": [
+        "img/tienda/guashacuarzorosa.png",
+        "img/tienda/guashabeneficios.png"
+      ]
+    },
+    {
+      "id": "guasha_jade",
+      "name": "Gua Sha Jade Verde",
+      "name_en": "Green Jade Gua Sha",
+      "brand": "Gua Sha",
+      "description": "Jade verde natural, se mantiene frío naturalmente. Ideal para contornear mandíbula y pómulos. Energía equilibrante.",
+      "description_en": "Natural green jade, stays naturally cool. Ideal for contouring jaw and cheekbones. Balancing energy.",
+      "price": 18000,
+      "image": "img/tienda/guashapiedrajade.png",
+      "images": [
+        "img/tienda/guashapiedrajade.png",
+        "img/tienda/guashabeneficios.png"
+      ]
+    },
+    {
+      "id": "guasha_acero",
+      "name": "Gua Sha Acero Inoxidable",
+      "name_en": "Stainless Steel Gua Sha",
+      "brand": "Gua Sha",
+      "description": "Gua Sha de acero inoxidable quirúrgico. Se enfría naturalmente, hipoalergénico y duradero. Ideal para drenaje profesional.",
+      "description_en": "Surgical stainless steel Gua Sha. Naturally cool, hypoallergenic and durable. Ideal for professional drainage.",
+      "price": 25000,
+      "image": "img/tienda/guashaacero.png",
+      "images": [
+        "img/tienda/guashaacero.png",
+        "img/tienda/guashabeneficios.png"
+      ]
+    },
+    {
+      "id": "kit_roller_guasha",
+      "name": "Kit Roller de Jade + Gua Sha",
+      "name_en": "Jade Roller + Gua Sha Kit",
+      "brand": "Set Completo",
+      "description": "Set completo en caja de regalo: roller facial de jade + gua sha. El regalo perfecto para amantes del skincare.",
+      "description_en": "Complete gift box set: jade facial roller + gua sha. The perfect gift for skincare lovers.",
+      "price": 32000,
+      "image": "img/tienda/guashayrollo.png"
+    },
+    {
+      "id": "kit_skincare_completo",
+      "name": "Kit Skincare Completo",
+      "name_en": "Complete Skincare Kit",
+      "brand": "Accesorios",
+      "description": "Vincha spa + toalla facial microfibra + muñequeras + pad desmaquillante reutilizable. Todo para tu rutina diaria.",
+      "description_en": "Spa headband + microfiber facial towel + wristbands + reusable makeup remover pad. Everything for your daily routine.",
+      "price": 38000,
+      "image": "img/tienda/vinchaskincare.png",
+      "images": [
+        "img/tienda/vinchaskincare.png",
+        "img/tienda/vinchaskincare2.png",
+        "img/tienda/vinchaskincare3.png",
+        "img/tienda/vinchaskincare4.png"
+      ]
+    },
+    {
+      "id": "toallitas_microfibra",
+      "name": "Toallitas Desmaquillantes Reutilizables",
+      "name_en": "Reusable Makeup Remover Towels",
+      "brand": "Accesorio",
+      "description": "Set de toallitas desmaquillantes ultra suaves. Reutilizables, lavables a máquina. Ideales para pieles sensibles.",
+      "description_en": "Set of ultra-soft makeup remover towels. Reusable, machine washable. Ideal for sensitive skin.",
+      "price": 8000,
+      "image": "img/tienda/toallasdesmaquillantes.png"
+    }
+  ],
+  "promos": [
+    {
+      "id": "promo_combo_completo_to",
+      "name": "Combo Completo The Ordinary x7",
+      "name_en": "Complete The Ordinary Combo x7",
+      "brand": "The Ordinary",
+      "description": "Los 7 productos: Squalane Cleanser + Niacinamide + Ácido Hialurónico + AHA Peeling + Moisturizing Factors + Glycolic Acid Toner + Caffeine Solution. Tu arsenal completo de skincare importado.",
+      "description_en": "All 7 products: Squalane Cleanser + Niacinamide + Hyaluronic Acid + AHA Peeling + Moisturizing Factors + Glycolic Acid Toner + Caffeine Solution. Your complete imported skincare arsenal.",
+      "includes": ["to_squalane_cleanser", "to_niacinamide", "to_hyaluronic", "to_aha_bha_peeling", "to_nmf", "to_glycolic", "to_caffeine"],
+      "price": 295000,
+      "original_price": 315000,
+      "savings": 20000,
+      "image": "img/tienda/promo-combo-completo-to.jpg",
+      "origin": "USA"
+    },
+    {
+      "id": "promo_rutina_completa_to",
+      "name": "Rutina Completa The Ordinary x4",
+      "name_en": "Complete The Ordinary Routine x4",
+      "brand": "The Ordinary",
+      "description": "Squalane Cleanser + Niacinamide 10% + Ácido Hialurónico + Natural Moisturizing Factors. Tu rutina diaria importada completa.",
+      "description_en": "Squalane Cleanser + Niacinamide 10% + Hyaluronic Acid + Natural Moisturizing Factors. Your complete daily imported routine.",
+      "includes": ["to_squalane_cleanser", "to_niacinamide", "to_hyaluronic", "to_nmf"],
+      "price": 170000,
+      "original_price": 189000,
+      "savings": 19000,
+      "image": "img/tienda/promo-rutina-completa-to.jpg",
+      "origin": "USA"
+    },
+    {
+      "id": "promo_duo_exfoliacion",
+      "name": "Duo Exfoliación Profunda",
+      "name_en": "Deep Exfoliation Duo",
+      "brand": "The Ordinary",
+      "description": "AHA 30% + BHA 2% Peeling Solution + Glycolic Acid 7% Toning Solution. Exfoliación semanal + diaria para piel renovada.",
+      "description_en": "AHA 30% + BHA 2% Peeling Solution + Glycolic Acid 7% Toning Solution. Weekly + daily exfoliation for renewed skin.",
+      "includes": ["to_aha_bha_peeling", "to_glycolic"],
+      "price": 82000,
+      "original_price": 90000,
+      "savings": 8000,
+      "image": "img/tienda/promo-duo-exfoliacion.jpg",
+      "origin": "USA"
+    },
+    {
+      "id": "promo_idraet_completo",
+      "name": "Pack Idraet Completo",
+      "name_en": "Complete Idraet Pack",
+      "brand": "Idraet",
+      "description": "Kit Limpieza x6 + Rutina Vitamina C. Limpieza profunda + luminosidad con dermocosmetica profesional argentina.",
+      "description_en": "Cleansing Kit x6 + Vitamin C Routine. Deep cleansing + luminosity with professional Argentine dermocosmetics.",
+      "includes": ["idraet_limpieza_x6", "idraet_vitamina_c"],
+      "price": 175000,
+      "original_price": 195000,
+      "savings": 20000,
+      "image": "img/tienda/promo-idraet-completo.jpg",
+      "origin": "Argentina"
+    },
+    {
+      "id": "promo_skincare_starter",
+      "name": "Starter Kit Skincare + Herramientas",
+      "name_en": "Skincare + Tools Starter Kit",
+      "brand": "Shine Nails",
+      "description": "Combo Duo Hidratación T.O. + Kit Roller de Jade + Gua Sha + Kit Skincare Completo. Todo para empezar tu rutina profesional.",
+      "description_en": "T.O. Hydration Duo Combo + Jade Roller + Gua Sha Kit + Complete Skincare Kit. Everything to start your professional routine.",
+      "includes": ["combo_duo_hidratacion", "kit_roller_guasha", "kit_skincare_completo"],
+      "price": 118000,
+      "original_price": 130000,
+      "savings": 12000,
+      "image": "img/tienda/promo-starter-kit.jpg"
+    }
+  ]
+}

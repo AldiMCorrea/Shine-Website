@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("lang", currentLanguage);
             applyTranslations(translations[currentLanguage]);
             if (window.servicesData) renderAllFromJSON(window.servicesData);
+            if (window.tiendaData && window.renderTiendaFromJSON) window.renderTiendaFromJSON(window.tiendaData);
 
             languageSelector.querySelector("img").src = selected === "es"
               ? "https://flagcdn.com/w40/ar.png"
