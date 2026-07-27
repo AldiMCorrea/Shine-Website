@@ -7,7 +7,7 @@
         "name_en": "Manicure without polish",
         "description": "Limpieza, corte y moldeado de uñas de manos sin esmaltado.",
         "description_en": "Hand nail cleaning, cutting and shaping without polish.",
-        "price": 25000,
+        "price": 30000,
         "image": "img/shinefotos/1.ManicuraSinEsmaltado.jpeg",
         "object_position": "center 30%"
       },
@@ -68,7 +68,7 @@
         "name_en": "Pedicure without polish",
         "description": "Limpieza, corte y moldeado de uñas de pies sin esmaltado.",
         "description_en": "Foot nail cleaning, cutting and shaping without polish.",
-        "price": 25000,
+        "price": 30000,
         "image": "img/shinefotos/6.PedicuraSinEsmaltado.jpeg"
       },
       {
@@ -260,7 +260,7 @@
       "name_en": "Korean Nourishing Lash Lift",
       "description": "Lifting y tinte nutritivo de pestañas para una mirada abierta y definida.",
       "description_en": "Nourishing lash lift and tint for an open, defined look.",
-      "price": 33000,
+      "price": 35000,
       "image": "img/shinefotos/16.LiftingNutritivo.jpeg"
     },
     {
@@ -269,7 +269,7 @@
       "name_en": "Eyebrow Shaping",
       "description": "Perfilado preciso con cera o hilo para el arco perfecto.",
       "description_en": "Precise brow shaping with wax or thread for the perfect arch.",
-      "price": 15000,
+      "price": 20000,
       "image": "img/serviciosimagenes/PerfiladoCejas.jpeg",
       "object_position": "center 40%"
     },
@@ -279,7 +279,7 @@
       "name_en": "Design, Shaping & Tint",
       "description": "Diseño personalizado de cejas con perfilado y tinte profesional.",
       "description_en": "Custom brow design with professional shaping and tint.",
-      "price": 21000,
+      "price": 30000,
       "image": "img/serviciosimagenes/PerfiladoCejas2.jpeg",
       "object_position": "center 30%"
     },
@@ -299,7 +299,7 @@
       "name_en": "Shaping + Lamination",
       "description": "Combo perfilado de cejas con laminado nutritivo.",
       "description_en": "Brow shaping combo with nourishing lamination.",
-      "price": 27000,
+      "price": 35000,
       "image": "img/serviciosimagenes/LaminadoPerfiladoCejas.jpeg",
       "object_position": "center 40%"
     },
@@ -333,7 +333,7 @@
       "description": "Esmaltado Semi Permanente en manos y pies + Lifting de Pestañas.",
       "description_en": "Semi-Permanent Polish on hands and feet + Lash Lifting.",
       "services": ["esmaltado_semi_manos", "esmaltado_semi_pies", "lifting_pestanas"],
-      "price": 93000,
+      "price": 97000,
       "original_price": 102000,
       "savings": 9000
     },
@@ -344,7 +344,7 @@
       "description": "Esmaltado Capping Gel en manos y pies + Lifting de Pestañas.",
       "description_en": "Capping Gel Polish on hands and feet + Lash Lifting.",
       "services": ["capping", "esmaltado_semi_pies", "lifting_pestanas"],
-      "price": 95000,
+      "price": 105000,
       "original_price": 104300,
       "savings": 9300
     },
@@ -355,7 +355,7 @@
       "description": "Lifting de Pestañas + Perfilado de Cejas + Laminado + Tinte.",
       "description_en": "Lash Lifting + Brow Shaping + Lamination + Tint.",
       "services": ["lifting_pestanas", "perfilado_cejas", "laminado_cejas", "tinte_henna"],
-      "price": 56000,
+      "price": 65000,
       "original_price": 64000,
       "savings": 8000
     },
@@ -386,8 +386,8 @@
       "id": "pack_popular",
       "name": "MÁS POPULAR",
       "name_en": "MOST POPULAR",
-      "price": 150000,
-      "description": "Extensiones Soft Gel Manos + Esmaltado Semipermanente en Pies + Lifting + Laminado + Perfilado + Tinte + Limpieza Facial Básica",
+      "price": 111000,
+      "description": "Extensiones Soft Gel Manos + Esmaltado Semipermanente en Pies + Lifting coreano nutritivo de pestañas",
       "description_en": "Soft Gel Extensions Hands + Semi-Permanent Pedicure + Lifting + Lamination + Shaping + Tint + Basic Facial Cleansing",
       "services": ["extensiones_softgel", "esmaltado_semi_pies", "lifting_pestanas", "laminado_cejas", "perfilado_cejas", "tinte_henna", "limpieza_cutis"],
       "featured": true
