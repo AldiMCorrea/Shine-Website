@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
       selected.forEach(s => { msg += `\u2022 ${s}\n`; });
       msg += `\nTotal estimado: ${fmt(total)}`;
     }
-    return `https://wa.me/543517890168?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/5493516187351?text=${encodeURIComponent(msg)}`;
   }
 
   if (waTani) {
